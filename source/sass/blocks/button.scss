@@ -1,0 +1,90 @@
+.button__main-offer {
+  @include typical-button;
+  width: 298px;
+  height: 75px;
+  background-image: url("../../img/icons/arrow-bottom.svg");
+  background-repeat: no-repeat;
+  background-position: 287px 32px;
+  justify-content: flex-start;
+  padding-left: 42px;
+}
+
+.button-selection {
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 1.415px;
+  color: rgba(44, 46, 63, 0.3);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.button__description {
+  @include typical-button;
+  width: 250px;
+  height: 75px;
+  letter-spacing: 2.6px;
+}
+
+.button-tariffs {
+  @include typical-button;
+  width: 310px;
+  height: 75px;
+  letter-spacing: 2.5px;
+  z-index: 3;
+}
+
+.button__send {
+  @include typical-button;
+  width: 176px;
+  height: 50px;
+}
+
+.button__description:hover,
+.button__main-offer:hover,
+.betton-tariffs:hover,
+.button__feedback {
+  background-color: #f17d4b;
+}
+
+.button__close {
+  display: block;
+  position: absolute;
+  border: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background: transparent;
+  right: 15px;
+  top: 30px;
+}
+
+.button__close::before {
+  content: "";
+  display: block;
+  width: 29px;
+  height: 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(20, 21, 23, 0.2);
+  transform: rotate(45deg);
+}
+
+.button__close::after {
+  content: "";
+  display: block;
+  width: 29px;
+  height: 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(20, 21, 23, 0.2);
+  transform: rotate(-45deg);
+}

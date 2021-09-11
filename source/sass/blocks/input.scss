@@ -1,0 +1,80 @@
+.input_custom {
+  width: 269px;
+  height: 50px;
+  border: 1px solid #d7d9df;
+  box-sizing: border-box;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #141517;
+}
+
+/* .input::placeholder {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #141517;
+} */
+
+.input__phone {
+  padding-left: 51px;
+  background: #ffffff url("../../img/icons/star-input.svg") no-repeat;
+  background-position: 13px 8px;
+}
+
+.input__email {
+  padding-left: 15px;
+}
+
+.input__static-value {
+  display: block;
+  position: absolute;
+}
+
+.input__popup .input__static-value::before {
+  content: "+7";
+  display: block;
+  position: absolute;
+  top: -78px;
+  left: -111px;
+  font-size: 14px;
+  line-height: 17px;
+  color: #141517;
+}
+
+.input__feedback .input__static-value::after {
+  content: "+7";
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: 25px;
+  font-size: 14px;
+  line-height: 17px;
+  color: #141517;
+}
+
+.input__valilate-label-telephone,
+.input__valilate-label-email {
+  position: absolute;
+}
+
+.input__valilate-label-email::after,
+.input__valilate-label-telephone::before {
+  content: "Данные не верны";
+  position: absolute;
+  font-size: 12px;
+  line-height: 15px;
+  color: #fe7865;
+  top: -14px;
+  left: -17px;
+  width: 150px;
+}
+
+.input__valilate-label-email::after {
+  top: -14px;
+  left: 270px;
+}

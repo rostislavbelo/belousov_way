@@ -1,0 +1,45 @@
+.main-offer {
+  padding: 0;
+  margin: 0 auto 199px;
+  width: 100%;
+  min-height: 860px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main-offer::before {
+  display: block;
+  position: absolute;
+  content: "";
+  z-index: -1;
+  width: 100%;
+  min-height: 860px;
+  background: #6393bb url("../../img/background-main-desktop@1x.jpg") no-repeat;
+  background-size: cover;
+}
+
+.main-offer__main-title-wrapper {
+  padding: 0;
+  margin: 0 19.8vw 41px 0;
+  max-width: 465px;
+  min-height: 450px;
+  align-self: center;
+}
+
+.main-offer__main-title {
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 80px;
+  color: #ffffff;
+  padding: 0 0 29px 0;
+  letter-spacing: -1.10667px;
+}
+
+.main-offer__text {
+  font-size: 16px;
+  line-height: 170%;
+  letter-spacing: -0.466667px;
+  color: #ffffff;
+  padding: 0 0 34px 0;
+  margin: 0 72px 0 0;
+}
