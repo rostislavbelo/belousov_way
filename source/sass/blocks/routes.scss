@@ -141,7 +141,7 @@
 @media (max-width: $desktop-width) {
   .routes {
     padding: 0;
-    margin: 0 auto 70px;
+    margin: 0 auto 96px;
     width: 100%;
   }
 
@@ -177,20 +177,20 @@
   }
 
   .routes__list {
+    width: calc(1vw * (616 / (768 / 100)));
     padding: 0;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 82%;
-    column-gap: calc(40 * 100% / 616);
+    column-gap: calc(1vw * (40 / (768 / 100)));
     row-gap: 40px;
   }
 
   .routes__item {
     min-width: unset;
-    width: calc(288 * 100% / 641);
-    height: 55.4vw;
+    width: calc(1vw * (288 / (768 / 100)));
+    height: calc(1vw * (425 / (768 / 100)));
     max-width: unset;
     max-height: unset;
     margin: 0 0 0 0;

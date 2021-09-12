@@ -78,3 +78,9 @@
   top: -14px;
   left: 270px;
 }
+
+@media (max-width: $desktop-width) {
+  .input__phone {
+    background-position: 13px 5px;
+  }
+}

@@ -11,7 +11,6 @@
   margin: 0 auto 74px;
   display: flex;
   justify-content: flex-start;
-  min-width: 1024px;
   max-width: 1170px;
   padding: 0 40px;
 }
@@ -441,15 +440,15 @@
 @media (max-width: $desktop-width) {
   .selection {
     padding: 0;
-    margin: 0 auto 140px;
+    margin: 0 auto 110px;
     max-width: unset;
     background: unset;
   }
 
   .selection__buttons {
     position: relative;
-    margin: 0 auto 74px;
-    padding: 0 0 0 20px;
+    margin: 0 auto 29px;
+    padding: 0 0 0 22px;
     display: flex;
     justify-content: flex-start;
     min-width: unset;
@@ -486,7 +485,7 @@
 
   .selection__description {
     padding: 0;
-    margin: 0 auto 80px;
+    margin: 0 auto 76px;
     max-width: unset;
     width: 100%;
   }
@@ -516,6 +515,7 @@
     line-height: 150%;
     text-align: center;
     color: #2c2e3f;
+    letter-spacing: 0;
   }
 
   .selection__description-title::before {
@@ -524,8 +524,8 @@
 
   .selection__description-item-information {
     padding: 0 0 30px 0;
-    margin: 0;
-    width: 100%;
+    margin: 0 auto;
+    width: calc(1vw * (726 / (768 / 100)));
   }
 
   .selection__description-text {
@@ -538,7 +538,7 @@
   }
 
   .selection__description-item-comment {
-    padding: 29px 0 0 0;
+    padding: 32px 0 0 0;
     margin: 0;
     width: 100%;
     min-height: 415px;
@@ -667,7 +667,7 @@
     padding: 0;
     margin: 0 auto;
     max-width: unset;
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -675,20 +675,23 @@
   }
 
   .selection__tariffs-main-wrapper {
+    margin: 0 auto;
     display: flex;
     justify-content: flex-end;
     order: 2;
     min-height: 300px;
-    width: 100%;
+    width: calc(1vw * (725 / (768 / 100)));
   }
 
   .selection__tariffs-main {
-    // width: calc(310 * 100% / 1170);
     align-self: center;
-    //margin: 18px 0 0 0;
     order: 0;
-    width: 99%;
-    margin: 14px 0 0 0;
+    width: 100%;
+    margin: 0 0 0 0;
+    min-height: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 
   .selection__tariffs-main-title {
@@ -709,7 +712,7 @@
     font-size: 16px;
     line-height: 170%;
     color: rgba(44, 46, 63, 0.7);
-    margin: 0 0 30px 0;
+    margin: 0 0 32px 0;
     text-align: center;
   }
 
@@ -732,7 +735,7 @@
     line-height: 34px;
     color: #141517;
     text-align: center;
-    margin: 0 0 5px 0;
+    margin: 0 0 10px 0;
   }
 
   .selection__phone-value {
@@ -745,21 +748,21 @@
   }
 
   .selection__tariffs-list {
+    width: calc(1vw * (626 / (768 / 100)));
     order: 2;
-    width: 100%;
     min-height: 629px;
     padding: 0;
-    margin: 0;
     display: flex;
     justify-content: space-between;
-    column-gap: calc(50 * 100% / 768);
+    column-gap: (1vw * (50 / (768 / 100)));
+    margin: 0 auto;
   }
 
   .selection__tariffs-item {
     min-height: 539px;
     min-width: 248px;
     max-width: unset;
-    padding: 30px 20px 60px 20px;
+    padding: 27px 20px 60px 20px;
     margin: 0;
     background: #ffffff;
     border: 1px solid rgba(44, 46, 63, 0.3);
@@ -792,6 +795,7 @@
     padding: 0;
     align-self: flex-end;
     letter-spacing: -1.23px;
+    margin: 8px 12px 0 0;
   }
 
   .selection__tariffs-item:nth-child(2) .selection__tariffs-value {
@@ -803,7 +807,7 @@
     line-height: 24px;
     text-align: center;
     color: #2c2e3f;
-    padding: 0 15px 10px;
+    padding: 0 0 10px;
   }
 
   .selection__inclue-list {
@@ -814,11 +818,7 @@
   .selection__inclue-item {
     background: url("../../img/icons/check-red.svg") no-repeat;
     background-position: 0 12px;
-    margin: 0 0 15px 0;
-  }
-
-  .selection__inclue-list--komplex .selection__inclue-item:nth-child(1) {
-    margin: 0 0 7px 0;
+    margin: 0 0 10px 0;
   }
 
   .selection__tariffs-button {
@@ -837,12 +837,12 @@
     line-height: 32px;
     color: #2c2e3f;
     position: relative;
-    padding: 0 30px;
+    padding: 0 0 0 30px;
   }
 
   .selection__tariffs-item:hover {
     border: 3px solid #fe7865;
-    padding: 28px 18px 58px 18px;
+    padding: 25px 18px 58px 18px;
 
     .selection__inclue-item {
       background: url("../../img/icons/check-black.svg") no-repeat;

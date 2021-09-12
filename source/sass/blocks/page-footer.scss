@@ -110,7 +110,7 @@
 @media (max-width: $desktop-width) {
   .page-footer {
     max-width: unset;
-    width: 95%;
+    width: calc(1vw * (726 / (768 / 100)));
     min-height: 362px;
     padding: 0;
     margin: 0 auto 54px;
@@ -118,8 +118,8 @@
     grid-template-areas:
       "notice contacts"
       "corporations corporations ";
-    grid-template-rows: 65% 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 54.3% 1fr;
     row-gap: 30px;
   }
 
@@ -150,12 +150,12 @@
   }
 
   .page-footer__notice {
-    padding: 0 38px 0 0;
+    padding: 0 52px 0 0;
   }
 
   .page-footer__contacts {
     grid-area: contacts;
-    padding-left: 20px;
+    padding-left: 49px;
     margin: 0;
     border-left: 1px solid #d7d9df;
     border-right: unset;
@@ -224,6 +224,7 @@
 
   .page-footer__corporations-title {
     text-align: center;
+    margin-top: 28px;
   }
 
   .page-footer__corporations-text {
