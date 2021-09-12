@@ -106,3 +106,130 @@
   line-height: 24px;
   color: rgba(20, 21, 23, 0.5);
 }
+
+@media (max-width: $desktop-width) {
+  .page-footer {
+    max-width: unset;
+    width: 95%;
+    min-height: 362px;
+    padding: 0;
+    margin: 0 auto 54px;
+    display: grid;
+    grid-template-areas:
+      "notice contacts"
+      "corporations corporations ";
+    grid-template-rows: 65% 1fr;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 30px;
+  }
+
+  .page-footer__title {
+    margin: 0 0 20px 0;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 32px;
+    color: #141517;
+    text-align: left;
+  }
+
+  .notice__group-list {
+    grid-area: notice;
+    display: flex;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(20, 21, 23, 0.5);
+    justify-content: space-between;
+  }
+
+  .notice__subgroup-list {
+    width: 100%;
+    min-height: 126px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .page-footer__notice {
+    padding: 0 38px 0 0;
+  }
+
+  .page-footer__contacts {
+    grid-area: contacts;
+    padding-left: 20px;
+    margin: 0;
+    border-left: 1px solid #d7d9df;
+    border-right: unset;
+  }
+
+  .page-footer__contacts-title {
+    margin-bottom: 25px;
+  }
+
+  .page-footer__contacts-list {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .page-footer__contacts-item {
+    padding: 0 0 23px 42px;
+  }
+
+  .page-footer__contacts-email {
+    font-size: 14px;
+    line-height: 17px;
+    text-decoration-line: underline;
+    color: #fe7865;
+    position: relative;
+  }
+
+  .page-footer__contacts-phone {
+    display: block;
+    position: relative;
+    font-size: 16px;
+    line-height: 32px;
+    text-decoration-line: underline;
+    color: #fe7865;
+  }
+
+  .page-footer__phone-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -41px;
+    fill: #ffffff;
+    stroke: #d7d9df;
+    width: 30px;
+    height: 30px;
+  }
+
+  .page-footer__email-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -42px;
+    fill: #d7d9df;
+    width: 26px;
+    height: 20px;
+  }
+
+  .page-footer__corporations {
+    border-top: 1px solid #d7d9df;
+    grid-area: corporations;
+    padding: 0;
+  }
+
+  .page-footer__corporations-title {
+    text-align: center;
+  }
+
+  .page-footer__corporations-text {
+    text-align: center;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(20, 21, 23, 0.5);
+  }
+}

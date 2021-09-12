@@ -136,3 +136,143 @@
   width: 215px;
   height: 63px;
 }
+
+
+@media (max-width: $desktop-width) {
+  .routes {
+    padding: 0;
+    margin: 0 auto 70px;
+    width: 100%;
+  }
+
+  .routes__title {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 150%;
+    text-align: center;
+    color: #2c2e3f;
+    width: 510px;
+    padding: 0 0 22px 0;
+    position: relative;
+    margin: 0 auto;
+    letter-spacing: 0.1px;
+  }
+
+  .routes__title::before {
+    display: none;
+  }
+
+  .routes__info {
+    padding: 0 0 38px 0;
+    max-width: 377px;
+    font-family: "Montserrat", "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: -0.4px;
+    color: rgba(44, 46, 63, 0.7);
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .routes__list {
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 82%;
+    column-gap: calc(40 * 100% / 616);
+    row-gap: 40px;
+  }
+
+  .routes__item {
+    min-width: unset;
+    width: calc(288 * 100% / 641);
+    height: 55.4vw;
+    max-width: unset;
+    max-height: unset;
+    margin: 0 0 0 0;
+    position: relative;
+    display: flex;
+  }
+
+  .routes__item:nth-child(5n-1),
+  .routes__item:nth-child(5n) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .routes__item-content {
+    width: 100%;
+  }
+
+  .routes__img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .routes__item-content::before {
+    content: "смотреть подробнее";
+    position: absolute;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    width: 266px;
+    height: 77px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    box-sizing: border-box;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    cursor: pointer;
+    opacity: 0;
+    z-index: 3;
+  }
+
+  .routes__item-content::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 21, 23, 0.6);
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.2s ease-out;
+  }
+
+  .routes__item-content:hover::before,
+  .routes__item-content:hover::after {
+    opacity: 1;
+  }
+
+  .routes__name {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: -0.415px;
+    color: #2c2e3f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #ffffff;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 215px;
+    height: 63px;
+  }
+}

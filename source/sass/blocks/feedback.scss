@@ -66,3 +66,75 @@
 .feedback__validate-label--active {
   display: block;
 }
+
+@media (max-width: $desktop-width) {
+  .feedback {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto 60px;
+    max-width: unset;
+    min-height: 455px;
+  }
+
+  .feedback__form-wrapper {
+    width: 100%;
+    min-height: 455px;
+    background: url("../../img/tablet/feedback-background-tablet@1x.jpg") no-repeat;
+    background-size: 100%;
+    position: relative;
+    z-index: 10;
+  }
+
+  .feedback__form-field {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    padding: 70px 55px 74px 55px;
+    text-align: center;
+    width: 548px;
+    min-height: 167px;
+    background: #ffffff;
+    box-shadow: 0 4px 30px rgba(41, 54, 66, 0.1);
+    border-radius: 5px;
+  }
+
+  .feedback__form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .feedback__title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 32px;
+    color: #141517;
+    padding: 0 0 11px 0;
+  }
+
+  .feedback__text {
+    font-size: 16px;
+    line-height: 150%;
+    color: #141517;
+    padding: 0 0 24px 0;
+  }
+
+  .feedback__input {
+    margin: 0 0 25px 0;
+  }
+
+  .feedback__button {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .feedback__validate-label {
+    display: none;
+  }
+
+  .feedback__validate-label--active {
+    display: block;
+  }
+}

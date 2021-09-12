@@ -11,6 +11,7 @@
   margin: 0 auto 74px;
   display: flex;
   justify-content: flex-start;
+  min-width: 1024px;
   max-width: 1170px;
   padding: 0 40px;
 }
@@ -362,11 +363,12 @@
   font-size: 16px;
   line-height: 24px;
   color: #2c2e3f;
-  padding: 0 0 59px 0;
+  padding: 0 0 30px 0;
+  border-bottom: 1px solid rgba(44, 46, 63, 0.3);
 }
 
 .selection__inclue-list {
-  padding: 0;
+  padding: 28px 0 0 0;
   margin: 0;
 }
 
@@ -429,5 +431,436 @@
 
   .selection__tariffs-button {
     bottom: 25px;
+  }
+
+  .selection__tariffs-text {
+    border-bottom: 1px solid rgba(254, 120, 101, 0.5);
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .selection {
+    padding: 0;
+    margin: 0 auto 140px;
+    max-width: unset;
+    background: unset;
+  }
+
+  .selection__buttons {
+    position: relative;
+    margin: 0 auto 74px;
+    padding: 0 0 0 20px;
+    display: flex;
+    justify-content: flex-start;
+    min-width: unset;
+    max-width: unset;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+
+  .selection__buttons-list {
+    padding: 0;
+    margin: 0;
+    // width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px solid rgba(44, 46, 63, 0.3);
+  }
+
+  .selection__buttons-item {
+    padding: 0 0 15px 0;
+    margin: 0 100px 0 0;
+  }
+
+  .selection__buttons-item:last-child {
+    margin: 0;
+  }
+
+  .selection__button--active {
+    color: #fe7865;
+  }
+
+  .selection__description {
+    padding: 0;
+    margin: 0 auto 80px;
+    max-width: unset;
+    width: 100%;
+  }
+
+  .selection__description-list {
+    padding: 0;
+    margin: 0;
+  }
+
+  .selection__description-item {
+    padding: 0;
+    margin: 0;
+    display: none;
+    width: 100%;
+  }
+
+  .selection__description-item--active {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .selection__description-title {
+    padding: 0 0 20px 0;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 150%;
+    text-align: center;
+    color: #2c2e3f;
+  }
+
+  .selection__description-title::before {
+    display: none;
+  }
+
+  .selection__description-item-information {
+    padding: 0 0 30px 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .selection__description-text {
+    text-align: center;
+    padding: 0 0 20px 0;
+  }
+
+  .selection__description-button {
+    margin: 0 auto;
+  }
+
+  .selection__description-item-comment {
+    padding: 29px 0 0 0;
+    margin: 0;
+    width: 100%;
+    min-height: 415px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+  }
+
+  .selection__description-item-comment::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 415px;
+    background: url("../../img/tablet/description-greec-tablet@1x.jpg") no-repeat;
+    top: 0;
+    left: 0;
+    background-size: 100%;
+    z-index: 1;
+  }
+
+  .selection__description-item--albania .selection__description-item-comment::before {
+    background: url("../../img/tablet/description-albania-tablet@1x.jpg");
+    background-size: 100%;
+  }
+
+  .selection__description-item--macedonia .selection__description-item-comment::before {
+    background: url("../../img/tablet/description-macedonia-tablet@1x.jpg");
+    background-size: 100%;
+  }
+
+  .selection__description-item--montenegro .selection__description-item-comment::before {
+    background: url("../../img/tablet/description-montenegro-tablet@1x.jpg");
+    background-size: 100%;
+  }
+
+  .selection__description-item--croatia .selection__description-item-comment::before {
+    background: url("../../img/tablet/route-croatia-tablet@1x.jpg");
+    background-size: 100%;
+  }
+
+  .selection__description-comment {
+    position: relative;
+    top: 0;
+    right: 0;
+    padding: 30px;
+    width: 322px;
+    min-height: 307px;
+    z-index: 2;
+    background-color: #ffffff;
+  }
+
+  .selection__comment-title {
+    margin: 0 0 35px 0;
+    font-size: 30px;
+    line-height: 37px;
+    letter-spacing: -1.2px;
+    color: #2c2e3f;
+    position: relative;
+  }
+
+  .selection__comment-title::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 68px;
+    height: 1px;
+    background-color: #fe7865;
+    left: 1px;
+    bottom: -14px;
+  }
+
+  .selection__comment-text {
+    margin: 0;
+    padding: 0 0 40px 0;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: -0.408333px;
+    color: rgba(44, 46, 63, 0.7);
+  }
+
+  .selection__comment-author {
+    padding: 0 0 0 54px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.466667px;
+    color: rgb(44, 46, 63);
+    display: block;
+    position: relative;
+  }
+
+  .selection__comment-author::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: url("../../img/user-avatar1.jpg") no-repeat;
+    top: -10px;
+    left: 0;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+  }
+
+  .selection__description-item--albania .selection__comment-author::before {
+    background: url("../../img/user-avatar2.jpg") no-repeat;
+  }
+
+  .selection__description-item--macedonia.selection__comment-author::before {
+    background: url("../../img/user-avatar3.jpg") no-repeat;
+  }
+
+  .selection__description-item--montenegro .selection__comment-author::before {
+    background: url("../../img/user-avatar4.jpg") no-repeat;
+  }
+
+  .selection__description-item--croatia .selection__comment-author::before {
+    background: url("../../img/user-avatar5.jpg") no-repeat;
+    background-size: 100%;
+  }
+
+  .selection__tariffs {
+    position: relative;
+    padding: 0;
+    margin: 0 auto;
+    max-width: unset;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    column-gap: calc(90 * 100% / 1170);
+  }
+
+  .selection__tariffs-main-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    order: 2;
+    min-height: 300px;
+    width: 100%;
+  }
+
+  .selection__tariffs-main {
+    // width: calc(310 * 100% / 1170);
+    align-self: center;
+    //margin: 18px 0 0 0;
+    order: 0;
+    width: 99%;
+    margin: 14px 0 0 0;
+  }
+
+  .selection__tariffs-main-title {
+    padding: 0 0 20px 0;
+    margin: 0 0 0 0;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 150%;
+    text-align: center;
+    color: #2c2e3f;
+  }
+
+  .selection__tariffs-main-title::before {
+    display: none;
+  }
+
+  .selection__tariffs-main-text {
+    font-size: 16px;
+    line-height: 170%;
+    color: rgba(44, 46, 63, 0.7);
+    margin: 0 0 30px 0;
+    text-align: center;
+  }
+
+  .selection__tariffs-connection-phone {
+    width: 100%;
+    display: block;
+    position: relative;
+    font-size: 18px;
+    line-height: 32px;
+    text-decoration-line: underline;
+    text-align: center;
+    color: #fe7865;
+    margin: 0 0 0 0;
+  }
+
+
+  .selection__tariffs-connection-text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 34px;
+    color: #141517;
+    text-align: center;
+    margin: 0 0 5px 0;
+  }
+
+  .selection__phone-value {
+    display: block;
+    text-align: center;
+  }
+
+  .selection__phone-icon {
+    display: none;
+  }
+
+  .selection__tariffs-list {
+    order: 2;
+    width: 100%;
+    min-height: 629px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    column-gap: calc(50 * 100% / 768);
+  }
+
+  .selection__tariffs-item {
+    min-height: 539px;
+    min-width: 248px;
+    max-width: unset;
+    padding: 30px 20px 60px 20px;
+    margin: 0;
+    background: #ffffff;
+    border: 1px solid rgba(44, 46, 63, 0.3);
+    box-sizing: border-box;
+    border-radius: 6px;
+    position: relative;
+  }
+
+  .selection__tariffs-name {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 38px;
+    text-align: center;
+    letter-spacing: -1.27273px;
+    color: rgba(20, 21, 23, 0.7);
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 200px;
+    margin: 0 auto 10px;
+  }
+
+  .selection__tariffs-value {
+    display: block;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 34px;
+    color: rgba(20, 21, 23, 0.7);
+    padding: 0;
+    align-self: flex-end;
+    letter-spacing: -1.23px;
+  }
+
+  .selection__tariffs-item:nth-child(2) .selection__tariffs-value {
+    padding-left: 0;
+  }
+
+  .selection__tariffs-text {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #2c2e3f;
+    padding: 0 15px 10px;
+  }
+
+  .selection__inclue-list {
+    padding: 20px 0 0 0;
+    margin: 0;
+  }
+
+  .selection__inclue-item {
+    background: url("../../img/icons/check-red.svg") no-repeat;
+    background-position: 0 12px;
+    margin: 0 0 15px 0;
+  }
+
+  .selection__inclue-list--komplex .selection__inclue-item:nth-child(1) {
+    margin: 0 0 7px 0;
+  }
+
+  .selection__tariffs-button {
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .selection__tariffs-button:hover {
+    background-color: #f17d4b;
+  }
+
+  .selection__inclue-text {
+    font-size: 16px;
+    line-height: 32px;
+    color: #2c2e3f;
+    position: relative;
+    padding: 0 30px;
+  }
+
+  .selection__tariffs-item:hover {
+    border: 3px solid #fe7865;
+    padding: 28px 18px 58px 18px;
+
+    .selection__inclue-item {
+      background: url("../../img/icons/check-black.svg") no-repeat;
+      background-position: 0 12px;
+    }
+
+    .selection__tariffs-name {
+      color: #fe7865;
+      letter-spacing: unset;
+    }
+
+    .selection__tariffs-value {
+      color: #fe7865;
+    }
+
+    .selection__tariffs-button {
+      bottom: -3px;
+      width: calc(101% + 2px);
+    }
   }
 }

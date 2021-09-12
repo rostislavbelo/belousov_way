@@ -65,7 +65,13 @@
         <li class="routes__item">
           <a class="routes__item-content routes__item-content--greece" href="#selection">
             <picture>
-              <img class="routes__img" src="/img/route-greec@1x.jpg" alt="Пейзаж Греция" width="350" height="430">
+              <source type="image/webp" media="(min-width: 1024px)"
+                srcset="img/route-greec@1x.webp, img/route-greec@2x.webp 2x">
+              <source type="image/webp"
+                srcset="img/tablet/route-greec-tablet@1x.webp, img/tablet/route-greec-tablet@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="/img/route-greec@1x.jpg, /img/route-greec@2x.jpg 2x">
+              <img class="routes__img" src="img/tablet/route-greec-tablet@1x.jpg"
+                srcset="img/tablet/route-greec-tablet@2x.jpg 2x" alt="Пейзаж Греция" width="350" height="430">
             </picture>
             <span class="routes__name">Греция</span>
           </a>
@@ -73,7 +79,13 @@
         <li class="routes__item">
           <a class="routes__item-content  routes__item-content--albania" href="#selection">
             <picture>
-              <img class="routes__img" src="/img/route-albania@1x.jpg" alt="Пейзаж Албания" width="350" height="430">
+              <source type="image/webp" media="(min-width: 1024px)"
+                srcset="img/route-albania@1x.webp, img/route-albania@2x.webp 2x">
+              <source type="image/webp"
+                srcset="img/tablet/route-albania-tablet@1x.webp, img/tablet/route-albania-tablet@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="/img/route-albania@1x.jpg, /img/route-albania@2x.jpg 2x">
+              <img class="routes__img" src="tablet/route-albania-tablet@1x.jpg"
+                srcset="img/tablet/route-albania-tablet@2x.jpg 2x" alt="Пейзаж Албания" width="350" height="430">
             </picture>
             <span class="routes__name">Албания</span>
           </a>
@@ -81,8 +93,13 @@
         <li class="routes__item">
           <a class="routes__item-content  routes__item-content--macedonia" href="#selection">
             <picture>
-              <img class="routes__img" src="/img/route-macedonia@1x.jpg" alt="Пейзаж Македония" width="350"
-                height="430">
+              <source type="image/webp" media="(min-width: 1024px)"
+                srcset="img/route-macedonia@1x.webp, img/route-macedonia@2x.webp 2x">
+              <source type="image/webp"
+                srcset="img/tablet/route-macedonia-tablet@1x.webp, img/tablet/route-macedonia-tablet@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="/img/route-macedonia@1x.jpg, /img/route-macedonia@2x.jpg 2x">
+              <img class="routes__img" src="/img/tablet/route-macedonia@1x.jpg"
+                srcset="img/tablet/route-macedonia-tablet@2x.jpg 2x" alt="Пейзаж Македония" width="350" height="430">
             </picture>
             <span class="routes__name">Македония</span>
           </a>
@@ -90,8 +107,14 @@
         <li class="routes__item">
           <a class="routes__item-content  routes__item-content--montenegro" href="#selection">
             <picture>
-              <img class="routes__img" src="/img/route-montenegro@1x.jpg" alt="Пейзаж Черногория" width="350"
-                height="430">
+              <source type="image/webp" media="(min-width: 1024px)"
+                srcset="img/route-montenegro@1x.webp, img/route-montenegro@2x.webp 2x">
+              <source type="image/webp"
+                srcset="img/tablet/route-montenegro-tablet@1x.webp, img/tablet/route-montenegro-tablet@2x.webp 2x">
+              <source media="(min-width: 1440px)"
+                srcset="/img/route-montenegro@1x.jpg, /img/route-montenegro@2x.jpg 2x">
+              <img class="routes__img" src="/img/tablet/route-montenegro@1x.jpg"
+                srcset="img/tablet/route-montenegro-tablet@2x.jpg 2x" alt="Пейзаж Черногория" width="350" height="430">
             </picture>
             <span class="routes__name">Черногория</span>
           </a>
@@ -99,7 +122,13 @@
         <li class="routes__item">
           <a class="routes__item-content  routes__item-content--croatia" href="#selection">
             <picture>
-              <img class="routes__img" src="/img/route-croatia@1x.jpg" alt="Пейзаж Хорватия" width="350" height="430">
+              <source type="image/webp" media="(min-width: 1024px)"
+                srcset="img/route-croatia@1x.webp, img/route-croatia@2x.webp 2x">
+              <source type="image/webp"
+                srcset="img/tablet/route-croatia-tablet@1x.webp, img/tablet/route-croatia-tablet@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="/img/route-croatia@1x.jpg, /img/route-croatia@2x.jpg 2x">
+              <img class="routes__img" src="/img/tablet/route-croatia@1x.jpg"
+                srcset="img/tablet/route-croatia-tablet@2x.jpg 2x" alt="Пейзаж Хорватия" width="350" height="430">
             </picture>
             <span class="routes__name">Хорватия</span>
           </a>
@@ -113,7 +142,7 @@
             <button class="selection__button selection__button--active button-selection" type="button">Греция</button>
           </li>
           <li class="selection__buttons-item">
-            <button class="selection__button button-selection " type="button">Албания</button>
+            <button class="selection__button button-selection" type="button">Албания</button>
           </li>
           <li class="selection__buttons-item">
             <button class="selection__button button-selection" type="button">Македония</button>
@@ -295,11 +324,11 @@
     </section>
     <section class="feedback">
       <div class="feedback__form-wrapper">
-        <div class="feedback__form-field">
+        <div class="feedback__form-field input">
           <h3 class="visually-hidden">Форма обратной связи</h3>
           <p class="feedback__title">У Вас остались вопросы?</p>
           <p class="feedback__text">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
-          <form class="feedback__form input input__feedback button" action="https://echo.htmlacademy.ru" method="post">
+          <form class="feedback__form input__feedback button" action="https://echo.htmlacademy.ru" method="post">
             <span class="input__static-value"></span>
             <span class="input__valilate-label-telephone feedback__validate-label"></span>
             <label class="visually-hidden" for="telephone">Введите номер телефона</label>
@@ -379,7 +408,6 @@
       </Ul>
     </div>
     <div class="page-footer__contacts">
-
       <h4 class="page-footer__contacts-title page-footer__title">Наши контакты</h4>
       <ul class="page-footer__contacts-list">
         <li class="page-footer__contacts-item">
@@ -409,34 +437,34 @@
         времяпрепровождением</p>
     </div>
   </footer>
-  <div class="popup">
-    <div class="popup__succes-wrapper">
-      <div class="popup__succes button">
-        <button class="popup__button-close button__close" aria-label="Закрыть окно отправки формы"></button>
-        <p class="popup__succes-text">Форма успешно отправлена, спасибо! :)</p>
+    <div class="popup">
+      <div class="popup__succes-wrapper">
+        <div class="popup__succes button">
+          <button class="popup__button-close button__close" aria-label="Закрыть окно отправки формы"></button>
+          <p class="popup__succes-text">Форма успешно отправлена, спасибо! :)</p>
+        </div>
       </div>
-    </div>
-    <div class="popup__order-wrapper">
-      <div class="popup__order button">
-        <button class="popup__button-close button__close" aria-label="Закрыть окно заказа" type="button"></button>
-        <div class="popup__form-wrapper">
-          <h3 class="popup__title">Купить тур</h3>
-          <form class="popup__order-form input input__popup" action="https://echo.htmlacademy.ru" method="post">
-            <span class="input__static-value"></span>
-            <input class="popup__order-input input_custom input__phone" type="tel" name="telephone" id="phone"
-              placeholder="Введите 10 цифр номера" autofocus required pattern="[0-9]{10,10}">
-            <label class="visually-hidden" for="phone">Введите ваш номер телефона</label>
-            <input class="popup__order-input input_custom input__email" type="email" name="email" id="mail"
-              placeholder="E-mail">
-            <label class="visually-hidden" for="mail">Введите адрес email</label>
-            <button class="popup__order-button button__send" type="submit">отправить</button>
-          </form>
+      <div class="popup__order-wrapper">
+        <div class="popup__order button">
+          <button class="popup__button-close button__close" aria-label="Закрыть окно заказа" type="button"></button>
+          <div class="popup__form-wrapper input">
+            <h3 class="popup__title">Купить тур</h3>
+            <form class="popup__order-form input__popup" action="https://echo.htmlacademy.ru" method="post">
+              <span class="input__static-value"></span>
+              <input class="popup__order-input input_custom input__phone" type="tel" name="telephone" id="phone"
+                placeholder="Введите 10 цифр номера" autofocus required pattern="[0-9]{10,10}">
+              <label class="visually-hidden" for="phone">Введите ваш номер телефона</label>
+              <input class="popup__order-input input_custom input__email" type="email" name="email" id="mail"
+                placeholder="E-mail">
+              <label class="visually-hidden" for="mail">Введите адрес email</label>
+              <button class="popup__order-button button__send" type="submit">отправить</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <script src="./js/script.min.js"></script>
-  <script src="./js/slider.min.js"></script>
+    <script src="./js/script.min.js"></script>
+    <script src="./js/slider.min.js"></script>
 </body>
 
 </html>
