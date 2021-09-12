@@ -42,3 +42,10 @@
     height: 17px;
   }
 }
+
+@media (max-width: $tablet-width) {
+  .page-header__logo-container {
+    padding: 0;
+    margin: 16px 0 0 16px;
+  }
+}

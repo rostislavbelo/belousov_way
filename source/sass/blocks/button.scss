@@ -195,3 +195,79 @@
     transform: rotate(-45deg);
   }
 }
+
+@media (max-width: $tablet-width) {
+  .button__main-offer {
+    width: 248px;
+    background-position: 233px 16px;
+  }
+
+  .button__description {
+    width: 288px;
+  }
+
+  .button-tariffs {
+    @include typical-button;
+    width: 100.4%;
+    height: 50px;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    z-index: 5;
+  }
+
+  .button__send {
+    @include typical-button;
+    width: 250px;
+    height: 50px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 2px;
+  }
+
+  .button__description:hover,
+  .button__main-offer:hover,
+  .betton-tariffs:hover,
+  .button__feedback:hover,
+  .button__send:hover {
+    background-color: #f17d4b;
+  }
+
+  .button__close {
+    display: block;
+    position: absolute;
+    border: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background: transparent;
+    right: 15px;
+    top: 30px;
+  }
+
+  .button__close::before {
+    content: "";
+    display: block;
+    width: 29px;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(20, 21, 23, 0.2);
+    transform: rotate(45deg);
+  }
+
+  .button__close::after {
+    content: "";
+    display: block;
+    width: 29px;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(20, 21, 23, 0.2);
+    transform: rotate(-45deg);
+  }
+}
