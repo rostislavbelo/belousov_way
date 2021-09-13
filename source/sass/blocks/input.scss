@@ -84,3 +84,9 @@
     background-position: 13px 5px;
   }
 }
+
+@media (max-width: $tablet-width) {
+  .input__feedback .input__static-value::after {
+    left: 42px;
+  }
+}

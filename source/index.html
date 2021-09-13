@@ -17,8 +17,8 @@
 <body class="page-body">
   <header class="page-header">
     <div class="page-header__logo-container">
-      <a class="page-header__logo" aria-label="Логотип туроператора Way">
-        <svg class="page-header__logo-img" width="57" height="22">
+      <a class="page-header__logo" href="#">
+        <svg class="page-header__logo-img" width="57" height="22" aria-label="Логотип туроператора Way">
           <use xlink:href="img/sprite.svg#logo-way"></use>
         </svg>
       </a>
@@ -61,9 +61,9 @@
     <section class="routes" id="routes">
       <h2 class="routes__title">Места посещения</h2>
       <p class="routes__info">Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
-      <ul class="routes__list">
-        <li class="routes__item">
-          <a class="routes__item-content routes__item-content--greece" href="#selection">
+      <ul class="routes__list js">
+        <li class="routes__item js__show">
+          <a class="routes__item-content routes__item-content--greece js__show--greece" href="#selection">
             <picture>
               <source type="image/webp" media="(min-width: 1024px)"
                 srcset="img/route-greec@1x.webp, img/route-greec@2x.webp 2x">
@@ -76,8 +76,8 @@
             <span class="routes__name">Греция</span>
           </a>
         </li>
-        <li class="routes__item">
-          <a class="routes__item-content  routes__item-content--albania" href="#selection">
+        <li class="routes__item js__show">
+          <a class="routes__item-content  routes__item-content--albania js__show--albania" href="#selection">
             <picture>
               <source type="image/webp" media="(min-width: 1024px)"
                 srcset="img/route-albania@1x.webp, img/route-albania@2x.webp 2x">
@@ -90,8 +90,8 @@
             <span class="routes__name">Албания</span>
           </a>
         </li>
-        <li class="routes__item">
-          <a class="routes__item-content  routes__item-content--macedonia" href="#selection">
+        <li class="routes__item js__show">
+          <a class="routes__item-content  routes__item-content--macedonia js__show--macedonia" href="#selection">
             <picture>
               <source type="image/webp" media="(min-width: 1024px)"
                 srcset="img/route-macedonia@1x.webp, img/route-macedonia@2x.webp 2x">
@@ -104,8 +104,8 @@
             <span class="routes__name">Македония</span>
           </a>
         </li>
-        <li class="routes__item">
-          <a class="routes__item-content  routes__item-content--montenegro" href="#selection">
+        <li class="routes__item js__show">
+          <a class="routes__item-content  routes__item-content--montenegro js__show--montenegro" href="#selection">
             <picture>
               <source type="image/webp" media="(min-width: 1024px)"
                 srcset="img/route-montenegro@1x.webp, img/route-montenegro@2x.webp 2x">
@@ -119,8 +119,8 @@
             <span class="routes__name">Черногория</span>
           </a>
         </li>
-        <li class="routes__item">
-          <a class="routes__item-content  routes__item-content--croatia" href="#selection">
+        <li class="routes__item js__show">
+          <a class="routes__item-content  routes__item-content--croatia js__show--croatia" href="#selection">
             <picture>
               <source type="image/webp" media="(min-width: 1024px)"
                 srcset="img/route-croatia@1x.webp, img/route-croatia@2x.webp 2x">
@@ -137,21 +137,22 @@
     </section>
     <section class="selection" id="selection">
       <div class="selection__buttons">
-        <ul class="selection__buttons-list">
-          <li class="selection__buttons-item">
-            <button class="selection__button selection__button--active button-selection" type="button">Греция</button>
+        <ul class="selection__buttons-list js">
+          <li class="selection__buttons-item js__show">
+            <button class="selection__button selection__button--active button-selection js__show--greece"
+              type="button">Греция</button>
           </li>
-          <li class="selection__buttons-item">
-            <button class="selection__button button-selection" type="button">Албания</button>
+          <li class="selection__buttons-item js__show">
+            <button class="selection__button button-selection js__show--albania" type="button">Албания</button>
           </li>
-          <li class="selection__buttons-item">
-            <button class="selection__button button-selection" type="button">Македония</button>
+          <li class="selection__buttons-item js__show">
+            <button class="selection__button button-selection js__show--macedonia" type="button">Македония</button>
           </li>
-          <li class="selection__buttons-item">
-            <button class="selection__button button-selection" type="button">Черногория</button>
+          <li class="selection__buttons-item js__show">
+            <button class="selection__button button-selection js__show--montenegro" type="button">Черногория</button>
           </li>
-          <li class="selection__buttons-item">
-            <button class="selection__button button-selection" type="button">Хорватия</button>
+          <li class="selection__buttons-item js__show">
+            <button class="selection__button button-selection js__show--croatia" type="button">Хорватия</button>
           </li>
         </ul>
       </div>
@@ -167,7 +168,8 @@
                 После покарения скал из песчанника и обломочной горной породы, достигающих в
                 высоту 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в
                 монастырях Метеоры.</p>
-              <button class="selection__description-button button__description" type="button">купить тур сейчас</button>
+              <button class="selection__description-button button__description" type="button">купить тур
+                сейчас</button>
             </div>
             <div class="selection__description-item-comment">
               <div class="selection__description-comment">
@@ -187,7 +189,8 @@
                 встречает обычный, правда невероятно белоснежный и слишком крупный песок. Однако,
                 присмотревшись, можно понять, что это не песок, а камни, перетёртые до такого мелкого
                 состояния.</p>
-              <button class="selection__description-button button__description" type="button">купить тур сейчас</button>
+              <button class="selection__description-button button__description" type="button">купить тур
+                сейчас</button>
             </div>
             <div class="selection__description-item-comment">
               <div class="selection__description-comment">
@@ -225,7 +228,8 @@
                 каньоном реки Тара, который в некоторых местах высотой берегов доходит до 1300
                 метров, а шириной не превышает трех. При этом длина каньона составляет 80 км.
               </p>
-              <button class="selection__description-button button__description" type="button">купить тур сейчас</button>
+              <button class="selection__description-button button__description" type="button">купить тур
+                сейчас</button>
             </div>
             <div class="selection__description-item-comment">
               <div class="selection__description-comment">
@@ -243,7 +247,8 @@
                 Бередине. Ее подземный мир увлечет вас на 80-ти метровую глубину через 5 освещенных
                 залов, украшенных удивительными нерукотворными скульптурами — сталактитами и
                 сталагмитами — формировавшимися тысячи и тысячи лет.</p>
-              <button class="selection__description-button button__description" type="button">купить тур сейчас</button>
+              <button class="selection__description-button button__description" type="button">купить тур
+                сейчас</button>
             </div>
             <div class="selection__description-item-comment">
               <div class="selection__description-comment">
@@ -437,34 +442,34 @@
         времяпрепровождением</p>
     </div>
   </footer>
-    <div class="popup">
-      <div class="popup__succes-wrapper">
-        <div class="popup__succes button">
-          <button class="popup__button-close button__close" aria-label="Закрыть окно отправки формы"></button>
-          <p class="popup__succes-text">Форма успешно отправлена, спасибо! :)</p>
-        </div>
+  <div class="popup">
+    <div class="popup__succes-wrapper">
+      <div class="popup__succes button">
+        <button class="popup__button-close button__close" aria-label="Закрыть окно отправки формы"></button>
+        <p class="popup__succes-text">Форма успешно отправлена, спасибо! :)</p>
       </div>
-      <div class="popup__order-wrapper">
-        <div class="popup__order button">
-          <button class="popup__button-close button__close" aria-label="Закрыть окно заказа" type="button"></button>
-          <div class="popup__form-wrapper input">
-            <h3 class="popup__title">Купить тур</h3>
-            <form class="popup__order-form input__popup" action="https://echo.htmlacademy.ru" method="post">
-              <span class="input__static-value"></span>
-              <input class="popup__order-input input_custom input__phone" type="tel" name="telephone" id="phone"
-                placeholder="Введите 10 цифр номера" autofocus required pattern="[0-9]{10,10}">
-              <label class="visually-hidden" for="phone">Введите ваш номер телефона</label>
-              <input class="popup__order-input input_custom input__email" type="email" name="email" id="mail"
-                placeholder="E-mail">
-              <label class="visually-hidden" for="mail">Введите адрес email</label>
-              <button class="popup__order-button button__send" type="submit">отправить</button>
-            </form>
-          </div>
+    </div>
+    <div class="popup__order-wrapper">
+      <div class="popup__order button">
+        <button class="popup__button-close button__close" aria-label="Закрыть окно заказа" type="button"></button>
+        <div class="popup__form-wrapper input">
+          <h3 class="popup__title">Купить тур</h3>
+          <form class="popup__order-form input__popup" action="https://echo.htmlacademy.ru" method="post">
+            <span class="input__static-value"></span>
+            <input class="popup__order-input input_custom input__phone" type="tel" name="telephone" id="phone"
+              placeholder="Введите 10 цифр номера" autofocus required pattern="[0-9]{10,10}">
+            <label class="visually-hidden" for="phone">Введите ваш номер телефона</label>
+            <input class="popup__order-input input_custom input__email" type="email" name="email" id="mail"
+              placeholder="E-mail">
+            <label class="visually-hidden" for="mail">Введите адрес email</label>
+            <button class="popup__order-button button__send" type="submit">отправить</button>
+          </form>
         </div>
       </div>
     </div>
-    <script src="./js/script.min.js"></script>
-    <script src="./js/slider.min.js"></script>
+  </div>
+  <script src="./js/script.min.js"></script>
+  <script src="./js/slider.min.js"></script>
 </body>
 
 </html>

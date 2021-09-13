@@ -58,6 +58,11 @@
   justify-content: flex-start;
   border: none;
   box-sizing: border-box;
+
+  @media (min-resolution: 2dppx) {
+    background: url("../../img/background-popup@2x.jpg");
+    background-size: cover;
+  }
 }
 
 .popup__title {
