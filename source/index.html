@@ -60,9 +60,9 @@
     <section class="routes" id="routes">
       <h2 class="routes__title">Места посещения</h2>
       <p class="routes__info">Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
-      <ul class="routes__list js">
-        <li class="routes__item js__transition">
-          <a class="routes__item-content routes__item-content--greece js__transition--greece" href="#selection">
+      <ul class="routes__list">
+        <li class="routes__item">
+          <a class="routes__item-content routes__item-content--greece" href="#selection">
             <picture>
               <source type="image/webp" media="(min-width: 1024px)"
                 srcset="img/route-greec@1x.webp, img/route-greec@2x.webp 2x">
@@ -75,8 +75,8 @@
             <span class="routes__name">Греция</span>
           </a>
         </li>
-        <li class="routes__item js__transition">
-          <a class="routes__item-content  routes__item-content--albania js__transition--albania" href="#selection">
+        <li class="routes__item">
+          <a class="routes__item-content  routes__item-content--albania" href="#selection">
             <picture>
               <source type="image/webp" media="(min-width: 1024px)"
                 srcset="img/route-albania@1x.webp, img/route-albania@2x.webp 2x">
@@ -89,8 +89,8 @@
             <span class="routes__name">Албания</span>
           </a>
         </li>
-        <li class="routes__item js__transition">
-          <a class="routes__item-content  routes__item-content--macedonia js__transition--macedonia" href="#selection">
+        <li class="routes__item">
+          <a class="routes__item-content  routes__item-content--macedonia" href="#selection">
             <picture>
               <source type="image/webp" media="(min-width: 1024px)"
                 srcset="img/route-macedonia@1x.webp, img/route-macedonia@2x.webp 2x">
@@ -103,8 +103,8 @@
             <span class="routes__name">Македония</span>
           </a>
         </li>
-        <li class="routes__item js__transition">
-          <a class="routes__item-content  routes__item-content--montenegro js__transition--montenegro"
+        <li class="routes__item">
+          <a class="routes__item-content  routes__item-content--montenegro"
             href="#selection">
             <picture>
               <source type="image/webp" media="(min-width: 1024px)"
@@ -119,8 +119,8 @@
             <span class="routes__name">Черногория</span>
           </a>
         </li>
-        <li class="routes__item js__transition">
-          <a class="routes__item-content  routes__item-content--croatia js__transition--croatia" href="#selection">
+        <li class="routes__item">
+          <a class="routes__item-content  routes__item-content--croatia" href="#selection">
             <picture>
               <source type="image/webp" media="(min-width: 1024px)"
                 srcset="img/route-croatia@1x.webp, img/route-croatia@2x.webp 2x">
@@ -137,22 +137,22 @@
     </section>
     <section class="selection" id="selection">
       <div class="selection__buttons">
-        <ul class="selection__buttons-list js">
-          <li class="selection__buttons-item js__show">
-            <button class="selection__button selection__button--active button-selection js__show--greece"
+        <ul class="selection__buttons-list">
+          <li class="selection__buttons-item">
+            <button class="selection__button selection__button--active button-selection selection__button--greece"
               type="button">Греция</button>
           </li>
-          <li class="selection__buttons-item js__show">
-            <button class="selection__button button-selection js__show--albania" type="button">Албания</button>
+          <li class="selection__buttons-item ">
+            <button class="selection__button button-selection selection__button--albania" type="button">Албания</button>
           </li>
-          <li class="selection__buttons-item js__show">
-            <button class="selection__button button-selection js__show--macedonia" type="button">Македония</button>
+          <li class="selection__buttons-item ">
+            <button class="selection__button button-selection selection__button--macedonia" type="button">Македония</button>
           </li>
-          <li class="selection__buttons-item js__show">
-            <button class="selection__button button-selection js__show--montenegro" type="button">Черногория</button>
+          <li class="selection__buttons-item ">
+            <button class="selection__button button-selection selection__button--montenegro" type="button">Черногория</button>
           </li>
-          <li class="selection__buttons-item js__show">
-            <button class="selection__button button-selection js__show--croatia" type="button">Хорватия</button>
+          <li class="selection__buttons-item ">
+            <button class="selection__button button-selection selection__button--croatia" type="button">Хорватия</button>
           </li>
         </ul>
       </div>
@@ -279,7 +279,7 @@
           </div>
         </div>
         <ul class="selection__tariffs-list">
-          <li class="selection__tariffs-item">
+          <li class="selection__tariffs-item button">
             <p class="selection__tariffs-name">Комплексный
               <span class="selection__tariffs-value">$1999</span>
             </p>
@@ -301,7 +301,7 @@
             <button class="selection__tariffs-button button-tariffs button__buy" type="button">купить тур
               сейчас</button>
           </li>
-          <li class="selection__tariffs-item">
+          <li class="selection__tariffs-item button">
             <p class="selection__tariffs-name">Экономный
               <span class="selection__tariffs-value">$1399</span>
             </p>
@@ -339,11 +339,11 @@
             <span class="input__static-value"></span>
             <span class="input__valilate-label-telephone feedback__validate-label"></span>
             <label class="visually-hidden" for="telephone">Введите номер телефона</label>
-            <input class="feedback__input input_custom input__phone" type="tel" name="telephone" id="telephone"
+            <input class="feedback__input input__custom input__phone" type="tel" name="telephone" id="telephone"
               placeholder="Введите 10 цифр номера" required pattern="[0-9]{10,10}">
             <span class="input__valilate-label-email feedback__validate-label"></span>
             <label class="visually-hidden" for="email">Введите адрес e-mail</label>
-            <input class="feedback__input input_custom input__email" type="email" name="email" id="email"
+            <input class="feedback__input input__custom input__email" type="email" name="email" id="email"
               placeholder="E-mail">
             <button class="feedback__button button__send" type="submit">отправить</button>
           </form>
@@ -434,7 +434,6 @@
           </a>
         </li>
       </ul>
-
     </div>
     <div class="page-footer__corporations corporations">
       <h4 class="page-footer__corporations-title page-footer__title">Корпоративные путешествия</h4>
@@ -447,7 +446,7 @@
   <div class="popup">
     <div class="popup__succes-wrapper popup__succes-wrapper--deactive">
       <div class="popup__succes button">
-        <button class="popup__button-close popup__succes-button-close"
+        <button class="popup__button-close button__close popup__succes-button-close"
           aria-label="Закрыть окно отправки формы"></button>
         <p class="popup__succes-text">Форма успешно отправлена, спасибо! :)</p>
       </div>
@@ -460,11 +459,11 @@
           <h3 class="popup__title">Купить тур</h3>
           <form class="popup__order-form input__popup" action="https://echo.htmlacademy.ru" method="post">
             <span class="input__static-value"></span>
-            <input class="popup__order-input popup__order-input-phone input_custom input__phone" type="tel"
+            <input class="popup__order-input popup__order-input-phone input__custom input__phone" type="tel"
               name="telephone" id="phone" autofocus placeholder="Введите 10 цифр номера" required
               pattern="[0-9]{10,10}">
             <label class="visually-hidden" for="phone">Введите ваш номер телефона</label>
-            <input class="popup__order-input input_custom input__email" type="email" name="email" id="mail"
+            <input class="popup__order-input input__custom input__email" type="email" name="email" id="mail"
               placeholder="E-mail">
             <label class="visually-hidden" for="mail">Введите адрес email</label>
             <button class="popup__order-button popup__order-button-send button__send" type="submit">отправить</button>

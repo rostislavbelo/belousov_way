@@ -57,12 +57,12 @@
   display: block;
   position: absolute;
   border: none;
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
   background: transparent;
-  right: 15px;
-  top: 30px;
+  right: 0;
+  top: 0;
 }
 
 .button__close::before {
@@ -71,8 +71,8 @@
   width: 29px;
   height: 1px;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 30px;
+  left: 4px;
   background: rgba(20, 21, 23, 0.2);
   transform: rotate(45deg);
 }
@@ -83,8 +83,8 @@
   width: 29px;
   height: 1px;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 30px;
+  left: 4px;
   background: rgba(20, 21, 23, 0.2);
   transform: rotate(-45deg);
 }
@@ -163,12 +163,12 @@
     display: block;
     position: absolute;
     border: none;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
     background: transparent;
-    right: 15px;
-    top: 30px;
+    right: 0;
+    top: 0;
   }
 
   .button__close::before {
@@ -177,8 +177,8 @@
     width: 29px;
     height: 1px;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 30px;
+    left: 4px;
     background: rgba(20, 21, 23, 0.2);
     transform: rotate(45deg);
   }
@@ -189,8 +189,8 @@
     width: 29px;
     height: 1px;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 30px;
+    left: 4px;
     background: rgba(20, 21, 23, 0.2);
     transform: rotate(-45deg);
   }
@@ -228,12 +228,12 @@
     display: block;
     position: absolute;
     border: none;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
     background: transparent;
-    right: 15px;
-    top: 30px;
+    right: 0;
+    top: 0;
   }
 
   .button__close::before {
@@ -242,8 +242,8 @@
     width: 29px;
     height: 1px;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 30px;
+    left: 4px;
     background: rgba(20, 21, 23, 0.2);
     transform: rotate(45deg);
   }
@@ -254,8 +254,8 @@
     width: 29px;
     height: 1px;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 30px;
+    left: 4px;
     background: rgba(20, 21, 23, 0.2);
     transform: rotate(-45deg);
   }

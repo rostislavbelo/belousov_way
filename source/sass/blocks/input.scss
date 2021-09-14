@@ -1,4 +1,4 @@
-.input_custom {
+.input__custom {
   width: 269px;
   height: 50px;
   border: 1px solid #d7d9df;
@@ -10,15 +10,6 @@
   line-height: 17px;
   color: #141517;
 }
-
-/* .input::placeholder {
-  font-family: "Montserrat", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 17px;
-  color: #141517;
-} */
 
 .input__phone {
   padding-left: 51px;
@@ -88,5 +79,9 @@
 @media (max-width: $tablet-width) {
   .input__feedback .input__static-value::after {
     left: 42px;
+  }
+
+  .input__popup .input__static-value::before {
+    left: -118px;
   }
 }

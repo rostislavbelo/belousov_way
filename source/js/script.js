@@ -16,17 +16,17 @@ const startMobileMenu = function () {
 startMobileMenu();
 
 const showDescription = function () {
-  const route1 = document.querySelector(".js__transition--greece");
-  const route2 = document.querySelector(".js__transition--albania");
-  const route3 = document.querySelector(".js__transition--macedonia");
-  const route4 = document.querySelector(".js__transition--montenegro");
-  const route5 = document.querySelector(".js__transition--croatia");
+  const route1 = document.querySelector(".routes__item-content--greece");
+  const route2 = document.querySelector(".routes__item-content--albania");
+  const route3 = document.querySelector(".routes__item-content--macedonia");
+  const route4 = document.querySelector(".routes__item-content--montenegro");
+  const route5 = document.querySelector(".routes__item-content--croatia");
 
-  const select1 = document.querySelector(".js__show--greece");
-  const select2 = document.querySelector(".js__show--albania");
-  const select3 = document.querySelector(".js__show--macedonia");
-  const select4 = document.querySelector(".js__show--montenegro");
-  const select5 = document.querySelector(".js__show--croatia");
+  const select1 = document.querySelector(".selection__button--greece");
+  const select2 = document.querySelector(".selection__button--albania");
+  const select3 = document.querySelector(".selection__button--macedonia");
+  const select4 = document.querySelector(".selection__button--montenegro");
+  const select5 = document.querySelector(".selection__button--croatia");
 
   const description1 = document.querySelector(".selection__description-item--greece");
   const description2 = document.querySelector(".selection__description-item--albania");
@@ -141,58 +141,76 @@ const showDescription = function () {
 
 showDescription();
 
-const showPopup = function () {
+const popupsAct = function () {
   const buttonsBuy = document.querySelectorAll(".button__buy");
-  const popup = document.querySelector(".popup__order-wrapper");
+  const popupOrder = document.querySelector(".popup__order-wrapper");
   const inputFocus = document.querySelector(".popup__order-input-phone");
-
-  const buttonSend = document.querySelector(".popup__order-form");
-  const popupSucces = document.querySelector(".popup__succes-wrapper");
-
-
-  buttonsBuy.forEach(function (button) {
-    button.addEventListener("click", function () {
-      popup.classList.remove("popup__order-wrapper--deactive");
-      inputFocus.focus();
-    })
-  })
-
-  buttonSend.addEventListener("submit", function (evt) {
-    evt.preventDefault();
-    popup.classList.add("popup__order-wrapper--deactive");
-    popupSucces.classList.remove("popup__succes-wrapper--deactive")
-  })
-}
-
-showPopup();
-
-const closePopup = function () {
   const buttonSuccesClose = document.querySelector(".popup__succes-button-close");
   const buttonsOrderClose = document.querySelector(".popup__order-button-close");
-  const popupOrder = document.querySelector(".popup__order-wrapper");
   const popupSucces = document.querySelector(".popup__succes-wrapper");
+  const feedbackButton = document.querySelector(".feedback__form");
+  const buttonSend = document.querySelector(".popup__order-form");
 
-  buttonSuccesClose.addEventListener("click", function () {
-    popupSucces.classList.add("popup__succes-wrapper--deactive");
-  })
+  const showPopups = function () {
+    buttonsBuy.forEach(function (button) {
+      button.addEventListener("click", function () {
+        popupOrder.classList.remove("popup__order-wrapper--deactive");
+        inputFocus.focus();
+      })
+    })
 
-  buttonsOrderClose.addEventListener("click", function () {
-    popupOrder.classList.add("popup__order-wrapper--deactive");
-  })
-
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') {
+    buttonSend.addEventListener("submit", function (evt) {
+      evt.preventDefault();
       popupOrder.classList.add("popup__order-wrapper--deactive");
-      popupSucces.classList.add("popup__succes-wrapper--deactive");
-    }
-  });
+      popupSucces.classList.remove("popup__succes-wrapper--deactive")
+    })
+  };
 
-  document.addEventListener("click", function (e) {
-    if (e.target === popupOrder) {
-     // popupOrder.classList.add("popup__order-wrapper--deactive");
+  showPopups();
+
+  const closePopups = function () {
+    buttonSuccesClose.addEventListener("click", function () {
       popupSucces.classList.add("popup__succes-wrapper--deactive");
-    }
-  });
+    })
+
+    buttonsOrderClose.addEventListener("click", function () {
+      popupOrder.classList.add("popup__order-wrapper--deactive");
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        popupOrder.classList.add("popup__order-wrapper--deactive");
+        popupSucces.classList.add("popup__succes-wrapper--deactive");
+      }
+    });
+
+    document.addEventListener("click", function (e) {
+      if (e.target === popupOrder) {
+        popupOrder.classList.add("popup__order-wrapper--deactive");
+
+      }
+    });
+
+    document.addEventListener("click", function (e) {
+      if (e.target === popupSucces) {
+        popupSucces.classList.add("popup__succes-wrapper--deactive");
+      }
+    });
+  }
+
+  closePopups();
+
+  const sendFeedback = function () {
+    feedbackButton.addEventListener("submit", function (evt) {
+      evt.preventDefault();
+      popupSucces.classList.remove("popup__succes-wrapper--deactive");
+    })
+  };
+
+  sendFeedback();
+
 }
 
-closePopup();
+popupsAct();
+
+
