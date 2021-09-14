@@ -6,6 +6,9 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 10;
+}
+
+.popup__succes-wrapper--deactive {
   display: none;
 }
 
@@ -40,6 +43,9 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 10;
+}
+
+.popup__order-wrapper--deactive {
   display: none;
 }
 
@@ -59,10 +65,10 @@
   border: none;
   box-sizing: border-box;
 
-  @media (min-resolution: 2dppx) {
+  /*   @media (min-resolution: 2dppx) {
     background: url("../../img/background-popup@2x.jpg");
     background-size: cover;
-  }
+  } */
 }
 
 .popup__title {

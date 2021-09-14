@@ -6,7 +6,6 @@
   <title>HTML Academy: Way</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/style.min.css" rel="stylesheet" />
-  <link rel="preload" href="./js/script.min.js" as="script">
   <link rel="preload" href="./css/style.min.css" as="style" onload="this.rel='stylesheet'">
   <link rel="preload" href="./fonts/montserrat-v18-latin_cyrillic-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./fonts/montserrat-v18-latin_cyrillic-400.woff" as="font" type="font/woff" crossorigin>
@@ -23,15 +22,15 @@
         </svg>
       </a>
     </div>
-    <nav class="main-nav nojs">
-      <!--       <button class="main-nav__toggle nojs__header-toggle hamburger" type="button"
-        aria-label="Открыть/Закрыть навигацию по сайту">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button> -->
-      <div class="main-nav__wrapper nojs">
-        <ul class="main-nav__list main-nav__list-index nojs__main-menu">
+    <nav class="main-nav mobile-menu">
+      <button class="main-nav__mobile-menu mobile-menu__button mobile-menu__button--active" type="button"
+        aria-label="Открыть/Закрыть меню сайта">
+        <span class="mobile-menu__element"></span>
+        <span class="mobile-menu__element"></span>
+        <span class="mobile-menu__element"></span>
+      </button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list mobile-menu__elements mobile-menu__elements--active">
           <li class="main-nav__item">
             <a class="main-nav__item-content main-nav__item-content--active" href="#routes">О путешествии</a>
           </li>
@@ -62,8 +61,8 @@
       <h2 class="routes__title">Места посещения</h2>
       <p class="routes__info">Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
       <ul class="routes__list js">
-        <li class="routes__item js__show">
-          <a class="routes__item-content routes__item-content--greece js__show--greece" href="#selection">
+        <li class="routes__item js__transition">
+          <a class="routes__item-content routes__item-content--greece js__transition--greece" href="#selection">
             <picture>
               <source type="image/webp" media="(min-width: 1024px)"
                 srcset="img/route-greec@1x.webp, img/route-greec@2x.webp 2x">
@@ -76,8 +75,8 @@
             <span class="routes__name">Греция</span>
           </a>
         </li>
-        <li class="routes__item js__show">
-          <a class="routes__item-content  routes__item-content--albania js__show--albania" href="#selection">
+        <li class="routes__item js__transition">
+          <a class="routes__item-content  routes__item-content--albania js__transition--albania" href="#selection">
             <picture>
               <source type="image/webp" media="(min-width: 1024px)"
                 srcset="img/route-albania@1x.webp, img/route-albania@2x.webp 2x">
@@ -90,8 +89,8 @@
             <span class="routes__name">Албания</span>
           </a>
         </li>
-        <li class="routes__item js__show">
-          <a class="routes__item-content  routes__item-content--macedonia js__show--macedonia" href="#selection">
+        <li class="routes__item js__transition">
+          <a class="routes__item-content  routes__item-content--macedonia js__transition--macedonia" href="#selection">
             <picture>
               <source type="image/webp" media="(min-width: 1024px)"
                 srcset="img/route-macedonia@1x.webp, img/route-macedonia@2x.webp 2x">
@@ -104,8 +103,9 @@
             <span class="routes__name">Македония</span>
           </a>
         </li>
-        <li class="routes__item js__show">
-          <a class="routes__item-content  routes__item-content--montenegro js__show--montenegro" href="#selection">
+        <li class="routes__item js__transition">
+          <a class="routes__item-content  routes__item-content--montenegro js__transition--montenegro"
+            href="#selection">
             <picture>
               <source type="image/webp" media="(min-width: 1024px)"
                 srcset="img/route-montenegro@1x.webp, img/route-montenegro@2x.webp 2x">
@@ -119,8 +119,8 @@
             <span class="routes__name">Черногория</span>
           </a>
         </li>
-        <li class="routes__item js__show">
-          <a class="routes__item-content  routes__item-content--croatia js__show--croatia" href="#selection">
+        <li class="routes__item js__transition">
+          <a class="routes__item-content  routes__item-content--croatia js__transition--croatia" href="#selection">
             <picture>
               <source type="image/webp" media="(min-width: 1024px)"
                 srcset="img/route-croatia@1x.webp, img/route-croatia@2x.webp 2x">
@@ -168,7 +168,7 @@
                 После покарения скал из песчанника и обломочной горной породы, достигающих в
                 высоту 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в
                 монастырях Метеоры.</p>
-              <button class="selection__description-button button__description" type="button">купить тур
+              <button class="selection__description-button button__description button__buy" type="button">купить тур
                 сейчас</button>
             </div>
             <div class="selection__description-item-comment">
@@ -189,7 +189,7 @@
                 встречает обычный, правда невероятно белоснежный и слишком крупный песок. Однако,
                 присмотревшись, можно понять, что это не песок, а камни, перетёртые до такого мелкого
                 состояния.</p>
-              <button class="selection__description-button button__description" type="button">купить тур
+              <button class="selection__description-button button__description button__buy" type="button">купить тур
                 сейчас</button>
             </div>
             <div class="selection__description-item-comment">
@@ -209,7 +209,7 @@
                 который расположился в удивительно красивой лесистой местности возле Охридского озера и
                 Самуиловой твердыни. А также мы заберемся на вершину горы Татичев Камен где находится
                 археологический памятник Кокино в длину около 100 метров.</p>
-              <button class="selection__description-button button__description">купить тур сейчас</button>
+              <button class="selection__description-button button__description button__buy">купить тур сейчас</button>
             </div>
             <div class="selection__description-item-comment">
               <div class="selection__description-comment">
@@ -224,11 +224,11 @@
           <li class="selection__description-item selection__description-item--montenegro">
             <div class="selection__description-item-information button">
               <h4 class="selection__description-title">Черногория</h4>
-              <p class="selection__description-text">Черногория удивит нас самым большим в Европе
-                каньоном реки Тара, который в некоторых местах высотой берегов доходит до 1300
-                метров, а шириной не превышает трех. При этом длина каньона составляет 80 км.
+              <p class="selection__description-text">Черногория удивит нас самым большим в Европе каньоном реки Тара,
+                который в некоторых местах высотой берегов доходит до 1300 метров, а шириной не превышает трех.
+                При этом длина каньона составляет 80 км.
               </p>
-              <button class="selection__description-button button__description" type="button">купить тур
+              <button class="selection__description-button button__description button__buy" type="button">купить тур
                 сейчас</button>
             </div>
             <div class="selection__description-item-comment">
@@ -247,7 +247,7 @@
                 Бередине. Ее подземный мир увлечет вас на 80-ти метровую глубину через 5 освещенных
                 залов, украшенных удивительными нерукотворными скульптурами — сталактитами и
                 сталагмитами — формировавшимися тысячи и тысячи лет.</p>
-              <button class="selection__description-button button__description" type="button">купить тур
+              <button class="selection__description-button button__description button__buy" type="button">купить тур
                 сейчас</button>
             </div>
             <div class="selection__description-item-comment">
@@ -298,7 +298,8 @@
                 <p class="selection__inclue-text">Экскурсии по удивительно красивым местам Европы</p>
               </li>
             </ul>
-            <button class="selection__tariffs-button button-tariffs" type="button">купить тур сейчас</button>
+            <button class="selection__tariffs-button button-tariffs button__buy" type="button">купить тур
+              сейчас</button>
           </li>
           <li class="selection__tariffs-item">
             <p class="selection__tariffs-name">Экономный
@@ -322,7 +323,8 @@
                 <p class="selection__inclue-text">Экскурсии по удивительно красивым местам Европы</p>
               </li>
             </ul>
-            <button class="selection__tariffs-button button-tariffs" type="button">купить тур сейчас</button>
+            <button class="selection__tariffs-button button-tariffs button__buy" type="button">купить тур
+              сейчас</button>
           </li>
         </ul>
       </div>
@@ -443,33 +445,35 @@
     </div>
   </footer>
   <div class="popup">
-    <div class="popup__succes-wrapper">
+    <div class="popup__succes-wrapper popup__succes-wrapper--deactive">
       <div class="popup__succes button">
-        <button class="popup__button-close button__close" aria-label="Закрыть окно отправки формы"></button>
+        <button class="popup__button-close popup__succes-button-close"
+          aria-label="Закрыть окно отправки формы"></button>
         <p class="popup__succes-text">Форма успешно отправлена, спасибо! :)</p>
       </div>
     </div>
-    <div class="popup__order-wrapper">
+    <div class="popup__order-wrapper popup__order-wrapper--deactive">
       <div class="popup__order button">
-        <button class="popup__button-close button__close" aria-label="Закрыть окно заказа" type="button"></button>
+        <button class="popup__button-close popup__order-button-close button__close" aria-label="Закрыть окно заказа"
+          type="button"></button>
         <div class="popup__form-wrapper input">
           <h3 class="popup__title">Купить тур</h3>
           <form class="popup__order-form input__popup" action="https://echo.htmlacademy.ru" method="post">
             <span class="input__static-value"></span>
-            <input class="popup__order-input input_custom input__phone" type="tel" name="telephone" id="phone"
-              placeholder="Введите 10 цифр номера" autofocus required pattern="[0-9]{10,10}">
+            <input class="popup__order-input popup__order-input-phone input_custom input__phone" type="tel"
+              name="telephone" id="phone" autofocus placeholder="Введите 10 цифр номера" required
+              pattern="[0-9]{10,10}">
             <label class="visually-hidden" for="phone">Введите ваш номер телефона</label>
             <input class="popup__order-input input_custom input__email" type="email" name="email" id="mail"
               placeholder="E-mail">
             <label class="visually-hidden" for="mail">Введите адрес email</label>
-            <button class="popup__order-button button__send" type="submit">отправить</button>
+            <button class="popup__order-button popup__order-button-send button__send" type="submit">отправить</button>
           </form>
         </div>
       </div>
     </div>
   </div>
   <script src="./js/script.min.js"></script>
-  <script src="./js/slider.min.js"></script>
 </body>
 
 </html>

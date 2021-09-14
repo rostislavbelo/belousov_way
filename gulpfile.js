@@ -53,9 +53,9 @@ const scripts = () => {
     .pipe(rename("script.min.js"))
     .pipe(gulp.dest("build/js"))
     .pipe(sync.stream());
-  }
+}
 
-  exports.scripts = scripts;
+exports.scripts = scripts;
 
 /*   const scripts2 = () => {
     return gulp.src("source/js/popup-catalog.js")
@@ -190,10 +190,10 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series(styles));
-  gulp.watch("source/js/scripts.js", gulp.series(scripts));
-/*   gulp.watch("source/js/popup-catalog.js", gulp.series(scripts2));
-  gulp.watch("source/js/slider.js", gulp.series(scripts3));
-  gulp.watch("source/js/popup-form.js", gulp.series(scripts4)); */
+  gulp.watch("source/js/script.js", gulp.series(scripts));
+  /*   gulp.watch("source/js/popup-catalog.js", gulp.series(scripts2));
+    gulp.watch("source/js/slider.js", gulp.series(scripts3));
+    gulp.watch("source/js/popup-form.js", gulp.series(scripts4)); */
   gulp.watch("source/*.html", gulp.series(html, reload));
 }
 
@@ -207,9 +207,9 @@ const build = gulp.series(
     styles,
     html,
     scripts,
-/*     scripts2,
-    scripts3,
-    scripts4, */
+    /*     scripts2,
+        scripts3,
+        scripts4, */
     sprite,
     createWebp
   ),
@@ -228,9 +228,9 @@ exports.default = gulp.series(
     styles,
     html,
     scripts,
-/*     scripts2,
-    scripts3,
-    scripts4, */
+    /*     scripts2,
+        scripts3,
+        scripts4, */
     sprite,
     createWebp
   ),

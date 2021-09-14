@@ -1,236 +1,198 @@
-/* const main_nav_toggle = document.querySelector(".main-nav__toggle");
-const main_nav = document.querySelector(".main-nav");
-const slider_bullits_r = document.querySelectorAll(".reviews-bullit");
-const reviews_list = document.querySelector(".reviews__list");
-const slider_prev = document.querySelector(".slider-flipping__item--prev");
-const slider_next = document.querySelector(".slider-flipping__item--next");
-const reviews = document.querySelectorAll(".reviews__item");
-const slider_bullits_p = document.querySelectorAll(".slider-toggles__item");
-const price_list = document.querySelector(".price__list-container");
-const form = document.querySelector(".contest__form");
-const surname = document.querySelector(".surname");
-const name = document.querySelector(".name");
-const mail = document.querySelector(".mail");
-const m_failed = document.querySelector(".failed");
-const m_success = document.querySelector(".success");
-const popup_close = document.querySelectorAll(".popup-close");
-const contr_crop = document.querySelectorAll(".crop");
-const contr_fill = document.querySelectorAll(".fill");
-const contr_contrast = document.querySelectorAll(".contrast");
+const startMobileMenu = function () {
+  const buttonMenu = document.querySelector(".mobile-menu__button");
+  const menuActivate = document.querySelector(".mobile-menu__elements");
 
+  window.onload = function () {
+    buttonMenu.classList.remove("mobile-menu__button--active");
+    menuActivate.classList.remove("mobile-menu__elements--active");
 
-if (form) {
-  name.required = false;
-  surname.required = false;
-  mail.required = false;
-}
-
-main_nav_toggle.classList.add("main-nav__toggle--v");
-main_nav.classList.add("main-nav--close");
-
-main_nav_toggle.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  main_nav.classList.toggle("main-nav--close");
-});
-
-if (slider_bullits_r) {
-  slider_bullits_r.forEach(function (elem) {
-    elem.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      document
-        .querySelector(".reviews-bullit--current")
-        .classList.remove("reviews-bullit--current");
-      this.classList.add("reviews-bullit--current");
-
-      let k = Array.from(slider_bullits_r).indexOf(evt.target);
-      reviews_list.style.marginLeft =
-        -1 * k * (document.documentElement.clientWidth - 17) + 19 + "px";
-
-      document
-        .querySelector(".reviews__item--active")
-        .classList.remove("reviews__item--active");
-      reviews[k].classList.add("reviews__item--active");
+    buttonMenu.addEventListener("click", function () {
+      buttonMenu.classList.toggle("mobile-menu__button--active");
+      menuActivate.classList.toggle("mobile-menu__elements--active");
     });
-  });
+  };
 }
 
-if (reviews_list) {
-  window.addEventListener("resize", function () {
-    if (document.documentElement.clientWidth < 1200) {
-      let k = Array.from(reviews).indexOf(
-        document.querySelector(".reviews__item--active")
-      );
-      reviews_list.style.marginLeft =
-        -1 * k * (document.documentElement.clientWidth - 17) + 19 + "px";
-    } else {
-    }
-  });
-}
+startMobileMenu();
 
-if (slider_prev) {
-  slider_prev.addEventListener("click", function (evt) {
+const showDescription = function () {
+  const route1 = document.querySelector(".js__transition--greece");
+  const route2 = document.querySelector(".js__transition--albania");
+  const route3 = document.querySelector(".js__transition--macedonia");
+  const route4 = document.querySelector(".js__transition--montenegro");
+  const route5 = document.querySelector(".js__transition--croatia");
+
+  const select1 = document.querySelector(".js__show--greece");
+  const select2 = document.querySelector(".js__show--albania");
+  const select3 = document.querySelector(".js__show--macedonia");
+  const select4 = document.querySelector(".js__show--montenegro");
+  const select5 = document.querySelector(".js__show--croatia");
+
+  const description1 = document.querySelector(".selection__description-item--greece");
+  const description2 = document.querySelector(".selection__description-item--albania");
+  const description3 = document.querySelector(".selection__description-item--macedonia");
+  const description4 = document.querySelector(".selection__description-item--montenegro");
+  const description5 = document.querySelector(".selection__description-item--croatia");
+
+  const buttonsSelect = document.querySelectorAll(".selection__button");
+  const descriptionSelect = document.querySelectorAll(".selection__description-item");
+
+  const showRoute1 = function () {
+    buttonsSelect.forEach(function (sel) {
+      sel.classList.remove("selection__button--active");
+    });
+    select1.classList.add("selection__button--active");
+
+    descriptionSelect.forEach(function (des) {
+      des.classList.remove("selection__description-item--active");
+    });
+    description1.classList.add("selection__description-item--active");
+  }
+
+  const showRoute2 = function () {
+    buttonsSelect.forEach(function (sel) {
+      sel.classList.remove("selection__button--active");
+    });
+    select2.classList.add("selection__button--active");
+
+    descriptionSelect.forEach(function (des) {
+      des.classList.remove("selection__description-item--active");
+    });
+    description2.classList.add("selection__description-item--active");
+  }
+
+  const showRoute3 = function () {
+    buttonsSelect.forEach(function (sel) {
+      sel.classList.remove("selection__button--active");
+    });
+    select3.classList.add("selection__button--active");
+
+    descriptionSelect.forEach(function (des) {
+      des.classList.remove("selection__description-item--active");
+    });
+    description3.classList.add("selection__description-item--active");
+  }
+
+  const showRoute4 = function () {
+    buttonsSelect.forEach(function (sel) {
+      sel.classList.remove("selection__button--active");
+    });
+    select4.classList.add("selection__button--active");
+
+    descriptionSelect.forEach(function (des) {
+      des.classList.remove("selection__description-item--active");
+    });
+    description4.classList.add("selection__description-item--active");
+  }
+
+  const showRoute5 = function () {
+    buttonsSelect.forEach(function (sel) {
+      sel.classList.remove("selection__button--active");
+    });
+    select5.classList.add("selection__button--active");
+
+    descriptionSelect.forEach(function (des) {
+      des.classList.remove("selection__description-item--active");
+    });
+    description5.classList.add("selection__description-item--active");
+  }
+
+  route1.addEventListener("click", function () {
+    showRoute1();
+  });
+
+  select1.addEventListener("click", function () {
+    showRoute1();
+  });
+
+  route2.addEventListener("click", function () {
+    showRoute2();
+  });
+
+  select2.addEventListener("click", function () {
+    showRoute2();
+  });
+
+  route3.addEventListener("click", function () {
+    showRoute3();
+  });
+
+  select3.addEventListener("click", function () {
+    showRoute3();
+  });
+
+  route4.addEventListener("click", function () {
+    showRoute4();
+  });
+
+  select4.addEventListener("click", function () {
+    showRoute4();
+  });
+
+  route5.addEventListener("click", function () {
+    showRoute5();
+  });
+
+  select5.addEventListener("click", function () {
+    showRoute5();
+  });
+
+};
+
+showDescription();
+
+const showPopup = function () {
+  const buttonsBuy = document.querySelectorAll(".button__buy");
+  const popup = document.querySelector(".popup__order-wrapper");
+  const inputFocus = document.querySelector(".popup__order-input-phone");
+
+  const buttonSend = document.querySelector(".popup__order-form");
+  const popupSucces = document.querySelector(".popup__succes-wrapper");
+
+
+  buttonsBuy.forEach(function (button) {
+    button.addEventListener("click", function () {
+      popup.classList.remove("popup__order-wrapper--deactive");
+      inputFocus.focus();
+    })
+  })
+
+  buttonSend.addEventListener("submit", function (evt) {
     evt.preventDefault();
-    let k = Array.from(reviews).indexOf(
-      document.querySelector(".reviews__item--active")
-    );
-    if (k > 0) {
-      k = k - 1;
-    } else {
-      k = reviews.length - 1;
-    }
-    reviews_list.style.marginLeft =
-      -1 * k * (document.documentElement.clientWidth - 17) + 19 + "px";
-    document
-      .querySelector(".reviews__item--active")
-      .classList.remove("reviews__item--active");
-    console.log(k);
-    reviews[k].classList.add("reviews__item--active");
-
-    document
-      .querySelector(".reviews-bullit--current")
-      .classList.remove("reviews-bullit--current");
-    slider_bullits_r[k].classList.add("reviews-bullit--current");
-  });
+    popup.classList.add("popup__order-wrapper--deactive");
+    popupSucces.classList.remove("popup__succes-wrapper--deactive")
+  })
 }
 
-if (slider_next) {
-  slider_next.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    let k = Array.from(reviews).indexOf(
-      document.querySelector(".reviews__item--active")
-    );
-    if (k < reviews.length - 1) {
-      k = k + 1;
-    } else {
-      k = 0;
-    }
-    reviews_list.style.marginLeft =
-      -1 * k * (document.documentElement.clientWidth - 17) + 19 + "px";
-    document
-      .querySelector(".reviews__item--active")
-      .classList.remove("reviews__item--active");
-    console.log(k);
-    reviews[k].classList.add("reviews__item--active");
+showPopup();
 
-    document
-      .querySelector(".reviews-bullit--current")
-      .classList.remove("reviews-bullit--current");
-    slider_bullits_r[k].classList.add("reviews-bullit--current");
-  });
-}
+const closePopup = function () {
+  const buttonSuccesClose = document.querySelector(".popup__succes-button-close");
+  const buttonsOrderClose = document.querySelector(".popup__order-button-close");
+  const popupOrder = document.querySelector(".popup__order-wrapper");
+  const popupSucces = document.querySelector(".popup__succes-wrapper");
 
-if (slider_bullits_p) {
-  slider_bullits_p.forEach(function (elem) {
-    elem.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      document
-        .querySelector(".slider-toggles__item--current")
-        .classList.remove("slider-toggles__item--current");
-      this.classList.add("slider-toggles__item--current");
+  buttonSuccesClose.addEventListener("click", function () {
+    popupSucces.classList.add("popup__succes-wrapper--deactive");
+  })
 
-      let k = Array.from(slider_bullits_p).indexOf(evt.target);
-      price_list.style.marginLeft =
-        -1 * k * (document.documentElement.clientWidth - 41) + 19 + "px";
-    });
-  });
-}
+  buttonsOrderClose.addEventListener("click", function () {
+    popupOrder.classList.add("popup__order-wrapper--deactive");
+  })
 
-if (form) {
-  form.addEventListener("submit", function (evt) {
-    evt.preventDefault();
-    if (!name.value || !surname.value || !mail.value) {
-      m_failed.classList.add("popup--show");
-      if (!name.value) {
-        name.classList.add("error");
-      }
-      if (!surname.value) {
-        surname.classList.add("error");
-      }
-      if (!mail.value) {
-        mail.classList.add("error");
-      }
-    } else {
-      m_success.classList.add("popup--show");
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      popupOrder.classList.add("popup__order-wrapper--deactive");
+      popupSucces.classList.add("popup__succes-wrapper--deactive");
     }
   });
 
-  name.addEventListener("change", function () {
-    this.classList.remove("error");
-  });
-  surname.addEventListener("change", function () {
-    this.classList.remove("error");
-  });
-  mail.addEventListener("change", function () {
-    this.classList.remove("error");
+  document.addEventListener("click", function (e) {
+    if (e.target === popupOrder) {
+     // popupOrder.classList.add("popup__order-wrapper--deactive");
+      popupSucces.classList.add("popup__succes-wrapper--deactive");
+    }
   });
 }
 
-if (popup_close) {
-  popup_close.forEach(function (el) {
-    el.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      document.querySelector(".popup--show").classList.remove("popup--show");
-    });
-  });
-}
-
-if (contr_fill) {
-  contr_fill.forEach(function (el) {
-    el.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      document
-        .querySelector(".photo-upload__item-handle--active")
-        .classList.remove("photo-upload__item-handle--active");
-      document
-        .querySelector(".handle-fill")
-        .classList.add("photo-upload__item-handle--active");
-      document
-        .querySelector(".photo-upload__icon--active")
-        .classList.remove("photo-upload__icon--active");
-      document
-        .querySelector(".photo-upload__icon-fill")
-        .classList.add("photo-upload__icon--active");
-    });
-  });
-}
-
-if (contr_crop) {
-  contr_crop.forEach(function (el) {
-    el.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      document
-        .querySelector(".photo-upload__item-handle--active")
-        .classList.remove("photo-upload__item-handle--active");
-      document
-        .querySelector(".handle-crop")
-        .classList.add("photo-upload__item-handle--active");
-      document
-        .querySelector(".photo-upload__icon--active")
-        .classList.remove("photo-upload__icon--active");
-      document
-        .querySelector(".photo-upload__icon-crop")
-        .classList.add("photo-upload__icon--active");
-    });
-  });
-}
-
-if (contr_contrast) {
-  contr_contrast.forEach(function (el) {
-    el.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      document
-        .querySelector(".photo-upload__item-handle--active")
-        .classList.remove("photo-upload__item-handle--active");
-      document
-        .querySelector(".handle-contrast")
-        .classList.add("photo-upload__item-handle--active");
-      document
-        .querySelector(".photo-upload__icon--active")
-        .classList.remove("photo-upload__icon--active");
-      document
-        .querySelector(".photo-upload__icon-contrast")
-        .classList.add("photo-upload__icon--active");
-    });
-  });
-}
- */
+closePopup();

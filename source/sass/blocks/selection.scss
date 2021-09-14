@@ -231,7 +231,7 @@
   background: url("../../img/user-avatar2.jpg") no-repeat;
 }
 
-.selection__description-item--macedonia.selection__comment-author::before {
+.selection__description-item--macedonia .selection__comment-author::before {
   background: url("../../img/user-avatar3.jpg") no-repeat;
 }
 
@@ -241,7 +241,6 @@
 
 .selection__description-item--croatia .selection__comment-author::before {
   background: url("../../img/user-avatar5.jpg") no-repeat;
-  background-size: 100%;
 }
 
 .selection__tariffs {
@@ -686,7 +685,7 @@
     background: url("../../img/user-avatar2.jpg") no-repeat;
   }
 
-  .selection__description-item--macedonia.selection__comment-author::before {
+  .selection__description-item--macedonia .selection__comment-author::before {
     background: url("../../img/user-avatar3.jpg") no-repeat;
   }
 
@@ -1146,7 +1145,7 @@
     background: url("../../img/user-avatar2.jpg") no-repeat;
   }
 
-  .selection__description-item--macedonia.selection__comment-author::before {
+  .selection__description-item--macedonia .selection__comment-author::before {
     background: url("../../img/user-avatar3.jpg") no-repeat;
   }
 
