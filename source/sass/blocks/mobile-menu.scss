@@ -4,7 +4,7 @@
   right: 0;
   border: 0;
   padding: 0;
-  width: 50px;
+  width: 72px;
   height: 50px;
   background-color: rgb(254, 120, 101);
   cursor: pointer;
@@ -61,5 +61,11 @@
 
   .mobile-menu__elements--active {
     display: flex;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .mobile-menu__button {
+    width: 50px;
   }
 }

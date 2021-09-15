@@ -11,8 +11,7 @@ const startMobileMenu = function () {
       menuActivate.classList.toggle("mobile-menu__elements--active");
     });
   };
-}
-
+};
 startMobileMenu();
 
 const showDescription = function () {
@@ -59,7 +58,7 @@ const showDescription = function () {
       des.classList.remove("selection__description-item--active");
     });
     description2.classList.add("selection__description-item--active");
-  }
+  };
 
   const showRoute3 = function () {
     buttonsSelect.forEach(function (sel) {
@@ -71,7 +70,7 @@ const showDescription = function () {
       des.classList.remove("selection__description-item--active");
     });
     description3.classList.add("selection__description-item--active");
-  }
+  };
 
   const showRoute4 = function () {
     buttonsSelect.forEach(function (sel) {
@@ -83,7 +82,7 @@ const showDescription = function () {
       des.classList.remove("selection__description-item--active");
     });
     description4.classList.add("selection__description-item--active");
-  }
+  };
 
   const showRoute5 = function () {
     buttonsSelect.forEach(function (sel) {
@@ -95,7 +94,7 @@ const showDescription = function () {
       des.classList.remove("selection__description-item--active");
     });
     description5.classList.add("selection__description-item--active");
-  }
+  };
 
   route1.addEventListener("click", function () {
     showRoute1();
@@ -136,9 +135,7 @@ const showDescription = function () {
   select5.addEventListener("click", function () {
     showRoute5();
   });
-
 };
-
 showDescription();
 
 const popupsAct = function () {
@@ -162,16 +159,15 @@ const popupsAct = function () {
     buttonSend.addEventListener("submit", function (evt) {
       evt.preventDefault();
       popupOrder.classList.add("popup__order-wrapper--deactive");
-      popupSucces.classList.remove("popup__succes-wrapper--deactive")
-    })
+      popupSucces.classList.remove("popup__succes-wrapper--deactive");
+    });
   };
-
   showPopups();
 
   const closePopups = function () {
     buttonSuccesClose.addEventListener("click", function () {
       popupSucces.classList.add("popup__succes-wrapper--deactive");
-    })
+    });
 
     buttonsOrderClose.addEventListener("click", function () {
       popupOrder.classList.add("popup__order-wrapper--deactive");
@@ -187,30 +183,95 @@ const popupsAct = function () {
     document.addEventListener("click", function (e) {
       if (e.target === popupOrder) {
         popupOrder.classList.add("popup__order-wrapper--deactive");
-
-      }
+      };
     });
 
     document.addEventListener("click", function (e) {
       if (e.target === popupSucces) {
         popupSucces.classList.add("popup__succes-wrapper--deactive");
-      }
+      };
     });
   }
-
   closePopups();
 
   const sendFeedback = function () {
     feedbackButton.addEventListener("submit", function (evt) {
       evt.preventDefault();
       popupSucces.classList.remove("popup__succes-wrapper--deactive");
-    })
+    });
   };
-
   sendFeedback();
 
 }
-
 popupsAct();
 
+const validateInputs = function () {
+  const inputPhoneFeedback = document.querySelector(".input__phone-feedback");
+  const inputMailFeedback = document.querySelector(".input__email-feedback");
+  const labelPhoneFeedback = document.querySelector(".input__validate-label-telephone-feedback");
+  const labelMailFeedback = document.querySelector(".input__validate-label-email-feedback");
+  const labelPhonePopup = document.querySelector(".input__validate-label-popup-telephone");
+  const labelMailPopup = document.querySelector(".input__validate-label-popup-email");
+  const inputPhonePopup = document.querySelector(".popup__order-input-phone");
+  const inputMailPopup = document.querySelector(".popup__order-input-email");
 
+  const phonePattern = /^\d{10}$/;
+  const emailPannern = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+  const validatePhoneFeedbackInput = function () {
+    inputPhoneFeedback.addEventListener('change', function () {
+      if (!inputPhoneFeedback.value.match(phonePattern)) {
+        inputPhoneFeedback.classList.add("input__phone--invalid");
+        labelPhoneFeedback.classList.add("input__validate-label-telephone--active");
+      }
+      else {
+        inputPhoneFeedback.classList.remove("input__phone--invalid");
+        labelPhoneFeedback.classList.remove("input__validate-label-telephone--active");
+      };
+    });
+  }
+  validatePhoneFeedbackInput();
+
+  const validateEmailFeedbackInput = function () {
+    inputMailFeedback.addEventListener('change', function () {
+      if (!inputMailFeedback.value.match(emailPannern)) {
+        inputMailFeedback.classList.add("input__email--invalid");
+        labelMailFeedback.classList.add("input__validate-label-email--active");
+      }
+      else {
+        inputMailFeedback.classList.remove("input__email--invalid");
+        labelMailFeedback.classList.remove("input__validate-label-email--active");
+      };
+    });
+  }
+  validateEmailFeedbackInput();
+
+  const validatePhonePopupInput = function () {
+    inputPhonePopup.addEventListener('change', function () {
+      if (!inputPhonePopup.value.match(phonePattern)) {
+        inputPhonePopup.classList.add("input__phone--invalid");
+        labelPhonePopup.classList.add("input__validate-label-telephone--active");
+      }
+      else {
+        inputPhonePopup.classList.remove("input__phone--invalid");
+        labelPhonePopup.classList.remove("input__validate-label-telephone--active");
+      };
+    });
+  }
+  validatePhonePopupInput();
+
+  const validateEmailPopupInput = function () {
+    inputMailPopup.addEventListener('change', function () {
+      if (!inputMailPopup.value.match(emailPannern)) {
+        inputMailPopup.classList.add("input__email--invalid");
+        labelMailPopup.classList.add("input__validate-label-email--active");
+      }
+      else {
+        inputMailPopup.classList.remove("input__email--invalid");
+        labelMailPopup.classList.remove("input__validate-label-email--active");
+      };
+    });
+  }
+  validateEmailPopupInput();
+};
+validateInputs();

@@ -64,14 +64,6 @@
   margin: 0 auto;
 }
 
-.feedback__validate-label {
-  display: none;
-}
-
-.feedback__validate-label--active {
-  display: block;
-}
-
 @media (max-width: $desktop-width) {
   .feedback {
     width: 100%;
@@ -138,14 +130,6 @@
   .feedback__button {
     display: block;
     margin: 0 auto;
-  }
-
-  .feedback__validate-label {
-    display: none;
-  }
-
-  .feedback__validate-label--active {
-    display: block;
   }
 }
 
@@ -214,13 +198,5 @@
   .feedback__button {
     display: block;
     margin: 0 auto;
-  }
-
-  .feedback__validate-label {
-    display: none;
-  }
-
-  .feedback__validate-label--active {
-    display: block;
   }
 }

@@ -21,6 +21,11 @@
   padding-left: 15px;
 }
 
+.input__phone--invalid,
+.input__email--invalid {
+  border: 1px solid #fe7865;
+}
+
 .input__static-value {
   display: block;
   position: absolute;
@@ -48,13 +53,14 @@
   color: #141517;
 }
 
-.input__valilate-label-telephone,
-.input__valilate-label-email {
+.input__validate-label-telephone,
+.input__validate-label-email {
   position: absolute;
+  display: none;
 }
 
-.input__valilate-label-email::after,
-.input__valilate-label-telephone::before {
+.input__validate-label-email::after,
+.input__validate-label-telephone::before {
   content: "Данные не верны";
   position: absolute;
   font-size: 12px;
@@ -65,9 +71,24 @@
   width: 150px;
 }
 
-.input__valilate-label-email::after {
+.input__validate-label-email::after {
   top: -14px;
   left: 270px;
+}
+
+.input__validate-label-email--active,
+.input__validate-label-telephone--active {
+  display: block;
+}
+
+.popup__order-form .input__validate-label-telephone::before {
+  top: -109px;
+  left: -134px;
+}
+
+.popup__order-form .input__validate-label-email::after {
+  top: -39px;
+  left: -134px;
 }
 
 @media (max-width: $desktop-width) {
@@ -83,5 +104,22 @@
 
   .input__popup .input__static-value::before {
     left: -118px;
+  }
+
+  .input__validate-label-email::after {
+    top: 55px;
+    left: -2px;
+  }
+
+  .input__validate-label-telephone::before {
+    left: -2px;
+  }
+
+  .popup__order-form .input__validate-label-telephone::before {
+    left: -143px;
+  }
+
+  .popup__order-form .input__validate-label-email::after {
+    left: -143px;
   }
 }
