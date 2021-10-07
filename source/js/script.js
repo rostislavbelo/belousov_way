@@ -14,6 +14,19 @@ const startMobileMenu = function () {
 };
 startMobileMenu();
 
+const showPopupNoJs = function () {
+  const popupWrapper = document.querySelector(".popup__order-wrapper");
+  const popup = document.querySelector(".popup__order");
+
+  popupWrapper.classList.remove("popup__order-wrapper--no-js");
+  popup.classList.remove("popup__order--no-js");
+
+  popupWrapper.classList.add("popup__order-wrapper--on-js");
+  popupWrapper.classList.add("popup__order-wrapper--deactive");
+  popup.classList.add("popup__order--active");
+}
+showPopupNoJs();
+
 const showDescription = function () {
   const route1 = document.querySelector(".routes__item-content--greece");
   const route2 = document.querySelector(".routes__item-content--albania");
@@ -150,7 +163,8 @@ const popupsAct = function () {
 
   const showPopups = function () {
     buttonsBuy.forEach(function (button) {
-      button.addEventListener("click", function () {
+      button.addEventListener("click", function (evt) {
+        evt.preventDefault();
         popupOrder.classList.remove("popup__order-wrapper--deactive");
         inputFocus.focus();
       })
@@ -216,62 +230,40 @@ const validateInputs = function () {
   const inputMailPopup = document.querySelector(".popup__order-input-email");
 
   const phonePattern = /^\d{10}$/;
-  const emailPannern = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+  const emailPattern = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 
-  const validatePhoneFeedbackInput = function () {
-    inputPhoneFeedback.addEventListener('change', function () {
-      if (!inputPhoneFeedback.value.match(phonePattern)) {
-        inputPhoneFeedback.classList.add("input__phone--invalid");
-        labelPhoneFeedback.classList.add("input__validate-label-telephone--active");
+  const validatePhone = function (input, label, border, text) {
+    input.addEventListener('change', function () {
+      if (!input.value.match(phonePattern) && input.value !== "") {
+        input.classList.add("input__phone--invalid");
+        label.classList.add("input__validate-label-telephone--active");
       }
       else {
-        inputPhoneFeedback.classList.remove("input__phone--invalid");
-        labelPhoneFeedback.classList.remove("input__validate-label-telephone--active");
-      };
-    });
+        input.classList.remove("input__phone--invalid");
+        label.classList.remove("input__validate-label-telephone--active");
+      }
+    })
   }
-  validatePhoneFeedbackInput();
 
-  const validateEmailFeedbackInput = function () {
-    inputMailFeedback.addEventListener('change', function () {
-      if (!inputMailFeedback.value.match(emailPannern)) {
-        inputMailFeedback.classList.add("input__email--invalid");
-        labelMailFeedback.classList.add("input__validate-label-email--active");
+  const validateMail = function (input, label) {
+    input.addEventListener('change', function () {
+      if (!input.value.match(emailPattern) && input.value !== "") {
+        input.classList.add("input__email--invalid");
+        label.classList.add("input__validate-label-email--active");
       }
       else {
-        inputMailFeedback.classList.remove("input__email--invalid");
-        labelMailFeedback.classList.remove("input__validate-label-email--active");
-      };
-    });
-  }
-  validateEmailFeedbackInput();
-
-  const validatePhonePopupInput = function () {
-    inputPhonePopup.addEventListener('change', function () {
-      if (!inputPhonePopup.value.match(phonePattern)) {
-        inputPhonePopup.classList.add("input__phone--invalid");
-        labelPhonePopup.classList.add("input__validate-label-telephone--active");
+        input.classList.remove("input__email--invalid");
+        label.classList.remove("input__validate-label-email--active");
       }
-      else {
-        inputPhonePopup.classList.remove("input__phone--invalid");
-        labelPhonePopup.classList.remove("input__validate-label-telephone--active");
-      };
-    });
+    })
   }
-  validatePhonePopupInput();
 
-  const validateEmailPopupInput = function () {
-    inputMailPopup.addEventListener('change', function () {
-      if (!inputMailPopup.value.match(emailPannern)) {
-        inputMailPopup.classList.add("input__email--invalid");
-        labelMailPopup.classList.add("input__validate-label-email--active");
-      }
-      else {
-        inputMailPopup.classList.remove("input__email--invalid");
-        labelMailPopup.classList.remove("input__validate-label-email--active");
-      };
-    });
+  const validateAll = function () {
+    inputPhoneFeedback.addEventListener('change', validatePhone(inputPhoneFeedback, labelPhoneFeedback));
+    inputMailFeedback.addEventListener('change', validateMail(inputMailFeedback, labelMailFeedback));
+    inputPhonePopup.addEventListener('change', validatePhone(inputPhonePopup, labelPhonePopup));
+    inputMailPopup.addEventListener('change', validateMail(inputMailPopup, labelMailPopup));
   }
-  validateEmailPopupInput();
-};
+  validateAll();
+}
 validateInputs();

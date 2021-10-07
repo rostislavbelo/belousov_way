@@ -2,14 +2,18 @@
   @include typical-button;
   width: 298px;
   height: 75px;
-  background-image: url("../../img/icons/arrow-bottom.svg");
+  background-image: url("../img/icons/arrow-bottom.svg");
   background-repeat: no-repeat;
   background-position: 287px 32px;
   justify-content: flex-start;
   padding-left: 42px;
 }
 
-.button-selection {
+.button__main-offer-content {
+  max-width: 50%;
+}
+
+.button__selection {
   padding: 0;
   border: none;
   background: transparent;
@@ -25,6 +29,10 @@
   cursor: pointer;
 }
 
+.button__selection:hover {
+  color: rgba(254, 120, 101, 0.7);
+}
+
 .button__description {
   @include typical-button;
   width: 250px;
@@ -32,7 +40,7 @@
   letter-spacing: 2.6px;
 }
 
-.button-tariffs {
+.button__tariffs {
   @include typical-button;
   width: 310px;
   height: 75px;
@@ -49,7 +57,8 @@
 .button__description:hover,
 .button__main-offer:hover,
 .betton-tariffs:hover,
-.button__feedback {
+.button__feedback:hover,
+.button__send:hover {
   background-color: #f17d4b;
 }
 
@@ -89,12 +98,17 @@
   transform: rotate(-45deg);
 }
 
+.button__close:hover::after,
+.button__close:hover::before {
+  background: rgba(20, 21, 23, 0.4);
+}
+
 @media (max-width: $desktop-width) {
   .button__main-offer {
     @include typical-button;
     width: 210px;
     height: 50px;
-    background-image: url("../../img/icons/arrow-bottom.svg");
+    background-image: url("../img/icons/arrow-bottom.svg");
     background-repeat: no-repeat;
     background-position: 195px 16px;
     justify-content: flex-start;
@@ -105,7 +119,7 @@
     letter-spacing: 2px;
   }
 
-  .button-selection {
+  .button__selection {
     padding: 0;
     border: none;
     background: transparent;
@@ -130,7 +144,7 @@
     letter-spacing: 2px;
   }
 
-  .button-tariffs {
+  .button__tariffs {
     @include typical-button;
     width: 100.4%;
     height: 50px;
@@ -206,7 +220,7 @@
     width: 288px;
   }
 
-  .button-tariffs {
+  .button__tariffs {
     width: 288px;
     margin: 0 auto;
     letter-spacing: 2.5px;

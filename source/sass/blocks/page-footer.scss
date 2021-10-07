@@ -60,6 +60,11 @@
   color: #fe7865;
 }
 
+.page-footer__contacts-email:hover,
+.page-footer__contacts-phone:hover {
+  color: rgba(254, 120, 101, 0.8);
+}
+
 .page-footer__phone-icon {
   display: block;
   position: absolute;

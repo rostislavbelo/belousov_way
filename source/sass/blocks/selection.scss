@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0 auto 140px;
   max-width: 1444px;
-  background: url("../../img/background-description.png") no-repeat;
+  background: url("../img/background-description.png") no-repeat;
   background-size: 100%;
   background-position: 2px 119px;
 }
@@ -20,6 +20,7 @@
   margin: 0;
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
   border-bottom: 1px solid rgba(44, 46, 63, 0.3);
 }
 
@@ -110,54 +111,54 @@
   position: absolute;
   width: 430px;
   height: 596px;
-  background: url("../../img/description-greec@1x.jpg") no-repeat;
+  background: url("../img/description-greec@1x.jpg") no-repeat;
   top: -10px;
   left: 0;
   background-size: 100%;
   z-index: 1;
 
   @media (min-resolution: 2dppx) {
-    background: url("../../img/description-greec@2x.jpg") no-repeat;
+    background: url("../img/description-greec@2x.jpg") no-repeat;
     background-size: 100%;
   }
 }
 
 .selection__description-item--albania .selection__description-item-comment::before {
-  background: url("../../img/description-albania@1x.jpg") no-repeat;
+  background: url("../img/description-albania@1x.jpg") no-repeat;
   background-size: 100%;
 
   @media (min-resolution: 2dppx) {
-    background: url("../../img/description-albania@2x.jpg") no-repeat;
+    background: url("../img/description-albania@2x.jpg") no-repeat;
     background-size: 100%;
   }
 }
 
 .selection__description-item--macedonia .selection__description-item-comment::before {
-  background: url("../../img/description-macedonia@1x.jpg") no-repeat;
+  background: url("../img/description-macedonia@1x.jpg") no-repeat;
   background-size: 100%;
 
   @media (min-resolution: 2dppx) {
-    background: url("../../img/description-macedonia@2x.jpg") no-repeat;
+    background: url("../img/description-macedonia@2x.jpg") no-repeat;
     background-size: 100%;
   }
 }
 
 .selection__description-item--montenegro .selection__description-item-comment::before {
-  background: url("../../img/description-montenegro@1x.jpg") no-repeat;
+  background: url("../img/description-montenegro@1x.jpg") no-repeat;
   background-size: 100%;
 
   @media (min-resolution: 2dppx) {
-    background: url("../../img/description-montenegro@2x.jpg") no-repeat;
+    background: url("../img/description-montenegro@2x.jpg") no-repeat;
     background-size: 100%;
   }
 }
 
 .selection__description-item--croatia .selection__description-item-comment::before {
-  background: url("../../img/description-croatia@1x.jpg") no-repeat;
+  background: url("../img/description-croatia@1x.jpg") no-repeat;
   background-size: 100%;
 
   @media (min-resolution: 2dppx) {
-    background: url("../../img/description-croatia@2x.jpg") no-repeat;
+    background: url("../img/description-croatia@2x.jpg") no-repeat;
     background-size: 100%;
   }
 }
@@ -218,7 +219,7 @@
   content: "";
   display: block;
   position: absolute;
-  background: url("../../img/user-avatar1.jpg") no-repeat;
+  background: url("../img/user-avatar1.jpg") no-repeat;
   top: -10px;
   left: 0;
   border-radius: 50%;
@@ -227,19 +228,19 @@
 }
 
 .selection__description-item--albania .selection__comment-author::before {
-  background: url("../../img/user-avatar2.jpg") no-repeat;
+  background: url("../img/user-avatar2.jpg") no-repeat;
 }
 
 .selection__description-item--macedonia .selection__comment-author::before {
-  background: url("../../img/user-avatar3.jpg") no-repeat;
+  background: url("../img/user-avatar3.jpg") no-repeat;
 }
 
 .selection__description-item--montenegro .selection__comment-author::before {
-  background: url("../../img/user-avatar4.jpg") no-repeat;
+  background: url("../img/user-avatar4.jpg") no-repeat;
 }
 
 .selection__description-item--croatia .selection__comment-author::before {
-  background: url("../../img/user-avatar5.jpg") no-repeat;
+  background: url("../img/user-avatar5.jpg") no-repeat;
 }
 
 .selection__tariffs {
@@ -306,6 +307,17 @@
   margin: 0 0 0 0;
 }
 
+.selection__phone-icon {
+  fill: #ffffff;
+  stroke: #fe7865;
+  position: absolute;
+  top: 0;
+  left: -3px;
+}
+
+.selection__tariffs-connection-phone:hover {
+  color: #fe7865;
+}
 
 .selection__tariffs-connection-text {
   font-weight: 500;
@@ -316,18 +328,9 @@
   margin: 0 0 15px 0;
 }
 
-
 .selection__phone-value {
   display: block;
   text-align: center;
-}
-
-.selection__phone-icon {
-  fill: #ffffff;
-  stroke: #fe7865;
-  position: absolute;
-  top: 0;
-  left: -3px;
 }
 
 .selection__tariffs-list {
@@ -393,7 +396,7 @@
 }
 
 .selection__inclue-item {
-  background: url("../../img/icons/check-red.svg") no-repeat;
+  background: url("../img/icons/check-red.svg") no-repeat;
   background-position: 0 12px;
   margin: 0 0 15px 0;
 }
@@ -426,7 +429,7 @@
   padding: 38px 28px 113px 28px;
 
   .selection__inclue-item {
-    background: url("../../img/icons/check-black.svg") no-repeat;
+    background: url("../img/icons/check-black.svg") no-repeat;
     background-position: 0 12px;
   }
 
@@ -477,6 +480,7 @@
     margin: 0;
     display: flex;
     justify-content: flex-start;
+    flex-wrap: nowrap;
     border-bottom: 1px solid rgba(44, 46, 63, 0.3);
   }
 
@@ -564,54 +568,54 @@
     position: absolute;
     width: 100%;
     height: 415px;
-    background: url("../../img/tablet/description-greec-tablet@1x.jpg") no-repeat;
+    background: url("../img/tablet/description-greec-tablet@1x.jpg") no-repeat;
     top: 0;
     left: 0;
     background-size: 100%;
     z-index: 1;
 
     @media (min-resolution: 2dppx) {
-      background: url("../../img/tablet/description-greec-tablet@2x.jpg") no-repeat;
+      background: url("../img/tablet/description-greec-tablet@2x.jpg") no-repeat;
       background-size: 100%;
     }
   }
 
   .selection__description-item--albania .selection__description-item-comment::before {
-    background: url("../../img/tablet/description-albania-tablet@1x.jpg") no-repeat;
+    background: url("../img/tablet/description-albania-tablet@1x.jpg") no-repeat;
     background-size: 100%;
 
     @media (min-resolution: 2dppx) {
-      background: url("../../img/tablet/description-albania-tablet@2x.jpg") no-repeat;
+      background: url("../img/tablet/description-albania-tablet@2x.jpg") no-repeat;
       background-size: 100%;
     }
   }
 
   .selection__description-item--macedonia .selection__description-item-comment::before {
-    background: url("../../img/tablet/description-macedonia-tablet@1x.jpg") no-repeat;
+    background: url("../img/tablet/description-macedonia-tablet@1x.jpg") no-repeat;
     background-size: 100%;
 
     @media (min-resolution: 2dppx) {
-      background: url("../../img/tablet/description-macedonia-tablet@2x.jpg") no-repeat;
+      background: url("../img/tablet/description-macedonia-tablet@2x.jpg") no-repeat;
       background-size: 100%;
     }
   }
 
   .selection__description-item--montenegro .selection__description-item-comment::before {
-    background: url("../../img/tablet/description-montenegro-tablet@1x.jpg") no-repeat;
+    background: url("../img/tablet/description-montenegro-tablet@1x.jpg") no-repeat;
     background-size: 100%;
 
     @media (min-resolution: 2dppx) {
-      background: url("../../img/tablet/description-montenegro-tablet@2x.jpg") no-repeat;
+      background: url("../img/tablet/description-montenegro-tablet@2x.jpg") no-repeat;
       background-size: 100%;
     }
   }
 
   .selection__description-item--croatia .selection__description-item-comment::before {
-    background: url("../../img/tablet/route-croatia-tablet@1x.jpg") no-repeat;
+    background: url("../img/tablet/route-croatia-tablet@1x.jpg") no-repeat;
     background-size: 100%;
 
     @media (min-resolution: 2dppx) {
-      background: url("../../img/tablet/route-croatia-tablet@2x.jpg") no-repeat;
+      background: url("../img/tablet/route-croatia-tablet@2x.jpg") no-repeat;
       background-size: 100%;
     }
   }
@@ -672,7 +676,7 @@
     content: "";
     display: block;
     position: absolute;
-    background: url("../../img/user-avatar1.jpg") no-repeat;
+    background: url("../img/user-avatar1.jpg") no-repeat;
     top: -10px;
     left: 0;
     border-radius: 50%;
@@ -681,19 +685,19 @@
   }
 
   .selection__description-item--albania .selection__comment-author::before {
-    background: url("../../img/user-avatar2.jpg") no-repeat;
+    background: url("../img/user-avatar2.jpg") no-repeat;
   }
 
   .selection__description-item--macedonia .selection__comment-author::before {
-    background: url("../../img/user-avatar3.jpg") no-repeat;
+    background: url("../img/user-avatar3.jpg") no-repeat;
   }
 
   .selection__description-item--montenegro .selection__comment-author::before {
-    background: url("../../img/user-avatar4.jpg") no-repeat;
+    background: url("../img/user-avatar4.jpg") no-repeat;
   }
 
   .selection__description-item--croatia .selection__comment-author::before {
-    background: url("../../img/user-avatar5.jpg") no-repeat;
+    background: url("../img/user-avatar5.jpg") no-repeat;
     background-size: 100%;
   }
 
@@ -851,7 +855,7 @@
   }
 
   .selection__inclue-item {
-    background: url("../../img/icons/check-red.svg") no-repeat;
+    background: url("../img/icons/check-red.svg") no-repeat;
     background-position: 0 12px;
     margin: 0 0 10px 0;
   }
@@ -880,7 +884,7 @@
     padding: 25px 18px 58px 18px;
 
     .selection__inclue-item {
-      background: url("../../img/icons/check-black.svg") no-repeat;
+      background: url("../img/icons/check-black.svg") no-repeat;
       background-position: 0 12px;
     }
 
@@ -1017,55 +1021,55 @@
     position: absolute;
     width: 100%;
     height: 415px;
-    background: url("../../img/mobile/description-greec-mobile@1x.jpg") no-repeat;
+    background: url("../img/mobile/description-greec-mobile@1x.jpg") no-repeat;
     top: 0;
     left: 0;
     background-size: 100%;
     z-index: 1;
 
     @media (min-resolution: 2dppx) {
-      background: url("../../img/mobile/description-greec-mobile@2x.jpg") no-repeat;
+      background: url("../img/mobile/description-greec-mobile@2x.jpg") no-repeat;
       background-size: 100%;
     }
   }
 
   .selection__description-item--albania .selection__description-item-comment::before {
-    background: url("../../img/mobile/description-albania-mobile@1x.jpg") no-repeat;
+    background: url("../img/mobile/description-albania-mobile@1x.jpg") no-repeat;
     background-size: 100%;
 
     @media (min-resolution: 2dppx) {
-      background: url("../../img/mobile/description-albania-mobile@2x.jpg") no-repeat;
+      background: url("../img/mobile/description-albania-mobile@2x.jpg") no-repeat;
       background-size: 100%;
     }
   }
 
   .selection__description-item--macedonia .selection__description-item-comment::before {
-    background: url("../../img/mobile/description-macedonia-mobile@1x.jpg") no-repeat;
+    background: url("../img/mobile/description-macedonia-mobile@1x.jpg") no-repeat;
     background-size: 100%;
 
     @media (min-resolution: 2dppx) {
-      background: url("../../img/mobile/description-macedonia-mobile@2x.jpg") no-repeat;
+      background: url("../img/mobile/description-macedonia-mobile@2x.jpg") no-repeat;
       background-size: 100%;
     }
   }
 
   .selection__description-item--montenegro .selection__description-item-comment::before {
-    background: url("../../img/mobile/description-montenegro-mobile@1x.jpg") no-repeat;
+    background: url("../img/mobile/description-montenegro-mobile@1x.jpg") no-repeat;
     background-size: 100%;
 
     @media (min-resolution: 2dppx) {
-      background: url("../../img/mobile/description-montenegro-mobile@2x.jpg") no-repeat;
+      background: url("../img/mobile/description-montenegro-mobile@2x.jpg") no-repeat;
       background-size: 100%;
     }
   }
 
   .selection__description-item--croatia .selection__description-item-comment::before {
-    background: url("../../img/mobile/description-croatia-mobile@1x.jpg") no-repeat;
+    background: url("../img/mobile/description-croatia-mobile@1x.jpg") no-repeat;
     background-size: 100%;
 
 
     @media (min-resolution: 2dppx) {
-      background: url("../../img/mobile/description-croatia-mobile@2x.jpg") no-repeat;
+      background: url("../img/mobile/description-croatia-mobile@2x.jpg") no-repeat;
       background-size: 100%;
     }
   }
@@ -1131,7 +1135,7 @@
     content: "";
     display: block;
     position: absolute;
-    background: url("../../img/user-avatar1.jpg") no-repeat;
+    background: url("../img/user-avatar1.jpg") no-repeat;
     top: -49px;
     left: 50%;
     transform: translateX(-50%);
@@ -1141,19 +1145,19 @@
   }
 
   .selection__description-item--albania .selection__comment-author::before {
-    background: url("../../img/user-avatar2.jpg") no-repeat;
+    background: url("../img/user-avatar2.jpg") no-repeat;
   }
 
   .selection__description-item--macedonia .selection__comment-author::before {
-    background: url("../../img/user-avatar3.jpg") no-repeat;
+    background: url("../img/user-avatar3.jpg") no-repeat;
   }
 
   .selection__description-item--montenegro .selection__comment-author::before {
-    background: url("../../img/user-avatar4.jpg") no-repeat;
+    background: url("../img/user-avatar4.jpg") no-repeat;
   }
 
   .selection__description-item--croatia .selection__comment-author::before {
-    background: url("../../img/user-avatar5.jpg") no-repeat;
+    background: url("../img/user-avatar5.jpg") no-repeat;
     background-size: 100%;
   }
 
@@ -1313,7 +1317,7 @@
   }
 
   .selection__inclue-item {
-    background: url("../../img/icons/check-red.svg") no-repeat;
+    background: url("../img/icons/check-red.svg") no-repeat;
     background-position: 0 12px;
     margin: 0 0 10px 0;
   }
@@ -1350,7 +1354,7 @@
     padding: 25px 18px 58px 18px;
 
     .selection__inclue-item {
-      background: url("../../img/icons/check-black.svg") no-repeat;
+      background: url("../img/icons/check-black.svg") no-repeat;
       background-position: 0 12px;
     }
 

@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: "Way"</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/style.min.css" rel="stylesheet" />
   <link rel="preload" href="./css/style.min.css" as="style" onload="this.rel='stylesheet'">
@@ -53,7 +54,7 @@
         <p class="main-offer__text">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а
           также потрясающая красота природы.</p>
         <a class="main-offer__main__button button__main-offer" href="#selection">
-          Смотреть тур
+          <span class="button__main-offer-content">Смотреть тур</span>
         </a>
       </div>
     </section>
@@ -136,24 +137,25 @@
     </section>
     <section class="selection" id="selection">
       <div class="selection__buttons">
-        <ul class="selection__buttons-list">
+        <ul class="selection__buttons-list button">
           <li class="selection__buttons-item">
-            <button class="selection__button selection__button--active button-selection selection__button--greece"
+            <button class="selection__button selection__button--active button__selection selection__button--greece"
               type="button">Греция</button>
           </li>
           <li class="selection__buttons-item ">
-            <button class="selection__button button-selection selection__button--albania" type="button">Албания</button>
+            <button class="selection__button button__selection selection__button--albania"
+              type="button">Албания</button>
           </li>
           <li class="selection__buttons-item ">
-            <button class="selection__button button-selection selection__button--macedonia"
+            <button class="selection__button button__selection selection__button--macedonia"
               type="button">Македония</button>
           </li>
           <li class="selection__buttons-item ">
-            <button class="selection__button button-selection selection__button--montenegro"
+            <button class="selection__button button__selection selection__button--montenegro"
               type="button">Черногория</button>
           </li>
           <li class="selection__buttons-item ">
-            <button class="selection__button button-selection selection__button--croatia"
+            <button class="selection__button button__selection selection__button--croatia"
               type="button">Хорватия</button>
           </li>
         </ul>
@@ -170,8 +172,8 @@
                 После покарения скал из песчанника и обломочной горной породы, достигающих в
                 высоту 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в
                 монастырях Метеоры.</p>
-              <button class="selection__description-button button__description button__buy" type="button">купить тур
-                сейчас</button>
+              <a class="selection__description-button button__description button__buy" href="#popup">купить тур
+                сейчас</a>
             </div>
             <div class="selection__description-item-comment">
               <div class="selection__description-comment">
@@ -300,8 +302,8 @@
                 <p class="selection__inclue-text">Экскурсии по удивительно красивым местам Европы</p>
               </li>
             </ul>
-            <button class="selection__tariffs-button button-tariffs button__buy" type="button">купить тур
-              сейчас</button>
+            <a class="selection__tariffs-button button__tariffs button__buy" href="#popup">купить тур
+              сейчас</a>
           </li>
           <li class="selection__tariffs-item button">
             <p class="selection__tariffs-name">Экономный
@@ -325,8 +327,8 @@
                 <p class="selection__inclue-text">Экскурсии по удивительно красивым местам Европы</p>
               </li>
             </ul>
-            <button class="selection__tariffs-button button-tariffs button__buy" type="button">купить тур
-              сейчас</button>
+            <a class="selection__tariffs-button button__tariffs button__buy" href="#popup">купить тур
+              сейчас</a>
           </li>
         </ul>
       </div>
@@ -339,14 +341,17 @@
           <p class="feedback__text">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
           <form class="feedback__form input__feedback button" action="https://echo.htmlacademy.ru" method="post">
             <span class="input__static-value"></span>
-            <span class="input__validate-label-telephone input__validate-label-telephone-feedback feedback__validate-label"></span>
+            <span
+              class="input__validate-label-telephone input__validate-label-telephone-feedback feedback__validate-label"></span>
             <label class="visually-hidden" for="telephone">Введите номер телефона</label>
-            <input class="feedback__input input__custom input__phone input__phone-feedback" type="tel" name="telephone" id="telephone"
-              placeholder="Введите 10 цифр номера" required pattern="[0-9]{10,10}" title="Формат: +79999999999" autocomplete="off">
-            <span class="input__validate-label-email input__validate-label-email-feedback feedback__validate-label"></span>
+            <input class="feedback__input input__custom input__phone input__phone-feedback" type="tel" name="telephone"
+              id="telephone" placeholder="Введите 10 цифр номера" required pattern="[0-9]{10,10}"
+              title="Формат: +79999999999" autocomplete="off">
+            <span
+              class="input__validate-label-email input__validate-label-email-feedback feedback__validate-label"></span>
             <label class="visually-hidden" for="email">Введите адрес e-mail</label>
-            <input class="feedback__input input__custom input__email input__email-feedback" type="email" name="email" id="email"
-              placeholder="E-mail" title="Формат: ivanov@mail.ru" autocomplete="off">
+            <input class="feedback__input input__custom input__email input__email-feedback" type="email" name="email"
+              id="email" placeholder="E-mail" title="Формат: ivanov@mail.ru" autocomplete="off">
             <button class="feedback__button button__send" type="submit">отправить</button>
           </form>
         </div>
@@ -453,22 +458,21 @@
         <p class="popup__succes-text">Форма успешно отправлена, спасибо! :)</p>
       </div>
     </div>
-    <div class="popup__order-wrapper popup__order-wrapper--deactive">
-      <div class="popup__order button">
+    <div class="popup__order-wrapper popup__order-wrapper--no-js">
+      <div class="popup__order popup__order--no-js button">
         <button class="popup__button-close popup__order-button-close button__close" aria-label="Закрыть окно заказа"
           type="button"></button>
-        <div class="popup__form-wrapper input">
+        <div class="popup__form-wrapper input" id="popup">
           <h3 class="popup__title">Купить тур</h3>
           <form class="popup__order-form input__popup" action="https://echo.htmlacademy.ru" method="post">
             <span class="input__static-value"></span>
-            <span
-              class="input__validate-label-telephone input__validate-label-popup-telephone"></span>
+            <span class="input__validate-label-telephone input__validate-label-popup-telephone"></span>
             <input class="popup__order-input popup__order-input-phone input__custom input__phone" type="tel"
-              name="telephone" id="phone" autofocus placeholder="Введите 10 цифр номера" required
-              pattern="[0-9]{10,10}" title="Формат: +79999999999" autocomplete="off">
+              name="telephone" id="phone" placeholder="Введите 10 цифр номера" required pattern="[0-9]{10,10}"
+              title="Формат: +79999999999" autocomplete="off">
             <label class="visually-hidden" for="phone">Введите ваш номер телефона</label>
-            <input class="popup__order-input popup__order-input-email input__custom input__email" type="email" name="email" id="mail"
-              placeholder="E-mail"  title="Формат: ivanov@mail.ru" autocomplete="off">
+            <input class="popup__order-input popup__order-input-email input__custom input__email" type="email"
+              name="email" id="mail" placeholder="E-mail" title="Формат: ivanov@mail.ru" autocomplete="off">
             <span class="input__validate-label-email input__validate-label-popup-email"></span>
             <label class="visually-hidden" for="mail">Введите адрес email</label>
             <button class="popup__order-button popup__order-button-send button__send" type="submit">отправить</button>

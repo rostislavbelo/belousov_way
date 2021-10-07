@@ -8,13 +8,13 @@
 .feedback__form-wrapper {
   width: calc(844 * 100% / 1170);
   min-height: 455px;
-  background: url("../../img/feedback-background@1x.jpg") no-repeat;
+  background: url("../img/feedback-background@1x.jpg") no-repeat;
   background-size: cover;
   position: relative;
   z-index: 10;
 
   @media (min-resolution: 2dppx) {
-    background: url("../../img/feedback-background@2x.jpg") no-repeat;
+    background: url("../img/feedback-background@2x.jpg") no-repeat;
     background-size: cover;
   }
 }
@@ -76,13 +76,13 @@
   .feedback__form-wrapper {
     width: 100%;
     min-height: 455px;
-    background: url("../../img/tablet/feedback-background-tablet@1x.jpg") no-repeat;
+    background: url("../img/tablet/feedback-background-tablet@1x.jpg") no-repeat;
     background-size: 100%;
     position: relative;
     z-index: 10;
 
     @media (min-resolution: 2dppx) {
-      background: url("../../img/tablet/feedback-background-tablet@2x.jpg") no-repeat;
+      background: url("../img/tablet/feedback-background-tablet@2x.jpg") no-repeat;
       background-size: 100%;
     }
   }

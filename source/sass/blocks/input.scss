@@ -11,9 +11,13 @@
   color: #141517;
 }
 
+.input__custom:hover {
+  border-color: rgba(44, 46, 63, 0.5);
+}
+
 .input__phone {
   padding-left: 51px;
-  background: #ffffff url("../../img/icons/star-input.svg") no-repeat;
+  background: #ffffff url("../img/icons/star-input.svg") no-repeat;
   background-position: 13px 8px;
 }
 
@@ -81,12 +85,12 @@
   display: block;
 }
 
-.popup__order-form .input__validate-label-telephone::before {
+.input__popup .input__validate-label-telephone::before {
   top: -109px;
   left: -134px;
 }
 
-.popup__order-form .input__validate-label-email::after {
+.input__popup .input__validate-label-email::after {
   top: -39px;
   left: -134px;
 }
@@ -115,11 +119,11 @@
     left: -2px;
   }
 
-  .popup__order-form .input__validate-label-telephone::before {
+  .input__popup .input__validate-label-telephone::before {
     left: -143px;
   }
 
-  .popup__order-form .input__validate-label-email::after {
+  .input__popup .input__validate-label-email::after {
     left: -143px;
   }
 }
